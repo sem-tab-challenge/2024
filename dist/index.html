@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SemTab 2024</title>
+  <link href="./css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <nav class="bg-grid bg-bottom z-20 sticky top-0 transition-all duration-300" id="nav-bar">
+    <div class="container flex flex-wrap items-center justify-between py-1">
+      <a href="./"
+         class="items-center space-x-3 rtl:space-x-reverse pointer-events-none opacity-0 transition-opacity duration-300"
+         id="nav-brand">
+        <span class="self-center text-2xl font-bold whitespace-nowrap bg-title">SemTab 2024</span>
+      </a>
+
+      <button data-collapse-toggle="navbar-default" type="button"
+              id="navbar-toggle"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
+
+      <div class="grid grid-rows-0fr transition-grid-template-rows w-full md:block md:ml-auto md:w-auto p-4"
+           id="navbar-content">
+        <ul
+            class="overflow-hidden font-semibold flex flex-col md:p-0 md:py-3 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:-mr-3">
+          <li>
+            <a href="#"
+               class="block text-primary py-1.5 px-3 rounded-lg"
+               aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#"
+               class="block py-1.5 px-3 text-foreground rounded-lg hover:bg-primary hover:text-primary-foreground">About</a>
+          </li>
+          <li>
+            <a href="#"
+               class="block py-1.5 px-3 text-foreground rounded-lg hover:bg-primary hover:text-primary-foreground">Services</a>
+          </li>
+          <li>
+            <a href="#"
+               class="block py-1.5 px-3 text-foreground rounded-lg hover:bg-primary hover:text-primary-foreground">Pricing</a>
+          </li>
+          <li>
+            <a href="#"
+               class="block py-1.5 px-3 text-foreground rounded-lg hover:bg-primary hover:text-primary-foreground">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="py-6 bg-grid bg-top">
+    <div class="container flex md:flex-row flex-col items-center">
+      <div
+           class="lg:flex-grow md:w-3/4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center md:min-w-prose">
+        <h1
+            class="sm:text-6xl text-3xl mb-4 font-bold bg-title">
+          SemTab 2024</h1>
+        <p class="mb-8 leading-relaxed">Semantic Web Challenge on Tabular Data to Knowledge Graph Matching</p>
+        <div class="flex flex-col md:flex-row gap-2 justify-center">
+          <a href="#tracks"
+             class="inline-flex justify-center text-primary-foreground bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primary/80 rounded-md text-lg">Tracks</a>
+          <a href="https://groups.google.com/g/sem-tab-challenge"
+             class="inline-flex justify-center text-center text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-md text-lg">Join
+            the forum</a>
+        </div>
+      </div>
+      <div class="lg:max-w-1/3 md:w-1/4 w-1/2 relative isolate md:ml-auto">
+        <img class="object-cover object-center rounded rotate-6" alt="hero"
+             src="./imgs/prize-success.png">
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- About the Challenge -->
+    <section class="py-6 container">
+      <h2 class="text-2xl font-bold bg-title">About the Challenge</h2>
+      <p>Tabular data in the form of CSV files is the common input format in a data analytics pipeline. However, a
+        lack
+        of understanding of the semantic structure and meaning of the content may hinder the data analytics process.
+        Thus gaining this semantic understanding will be very valuable for data integration, data cleaning, data
+        mining,
+        machine learning and knowledge discovery tasks. For example, understanding what the data is can help assess
+        what
+        sorts of transformation are appropriate on the data.
+      </p>
+      <p>
+        Tables on the Web may also be the source of highly valuable data. The addition of semantic information to Web
+        tables may enhance a wide range of applications, such as web search, question answering, and knowledge base
+        (KB)
+        construction.
+      </p>
+      <p>
+        Tabular data to Knowledge Graph (KG) matching is the process of assigning semantic tags from Knowledge Graphs
+        (e.g., Wikidata or DBpedia) to the elements of the table. This task however is often difficult in practice due
+        to metadata (e.g., table and column names) being missing, incomplete or ambiguous.
+      </p>
+      <p>
+        The <a href="http://www.cs.ox.ac.uk/isg/challenges/sem-tab/" target="_blank">SemTab challenge</a> aims at
+        benchmarking systems dealing with the tabular data to KG matching problem, so as to facilitate their
+        comparison
+        on the same basis and the reproducibility of the results.
+      </p>
+      <p>
+        The 2024 edition of this challenge will be collocated with the <a
+           href="https://iswc2024.semanticweb.org/event/3715c6fc-e2d7-47eb-8c01-5fe4ac589a52/summary"
+           target="_blank">23st International Semantic Web Conference</a> and the 19th International Workshop on
+        Ontology Matching.
+      </p>
+    </section>
+
+    <!-- Tracks -->
+    <section class="py-6 container">
+      <h2 class="text-2xl font-bold mb-3 bg-title scroll-m-20" id="tracks">Challenge Tracks</h2>
+
+      <h3 class="text-xl font-bold">Accuracy Track</h3>
+      <p>
+        The evaluation of systems regarding accuracy is similar to prior versions of the SemTab.
+        That is, to illustrate the accuracy of the submissions, we evaluate systems on typical multi-class
+        classification metrics as detailed below.
+        In addition, we adopt the "cscore" for the CTA task to reflect the distance in the type hierarchy between the
+        predicted column type and the ground truth semantic type.
+      </p>
+      <p>
+        Matching Tasks:
+      </p>
+      <ul class="list-disc ml-5 ">
+        <li><strong>CTA Task</strong>: Assigning a semantic type (a DBpedia class as fine-grained as possible)to
+          a column</li>
+        <li><strong>CEA Task</strong>: Matching a cell to a Wikidata entity</li>
+        <li><strong>CPA Task</strong>: Assigning a KG property to the relationship between two columns</li>
+        <li><strong>Table Topic Detection</strong>: Assigning a KG class to a table</li>
+        <li><strong>Column-Qualifier Annotation</strong>: Predicting both main properties and qualifiers for n-ary
+          relations that are expressed by three table columns</li>
+      </ul>
+
+
+      <h3 class="text-xl font-bold mt-6">Datasets Track</h3>
+      <h4 class="text-lg font-semibold title-font mb-2">New dataset contributions</h4>
+      <p class="leading-relaxed text-base">The data that table-to-Knowledge-Graph matching systems are trained and
+        evaluated on, is critical for their accuracy and relevance.
+        We invite dataset submissions that provide challenging and accessible new datasets to advance the
+        state-of-the-art of table-to-KG matching systems.
+      </p>
+      <p>Preferably, these datasets provide tables along with their ground truth annotations for at least one of
+        CEA, CTA and CPA tasks.
+        The dataset may be general or specific to a certain domain.
+      </p>
+      <p>Submissions will be evaluated according to provide the following:</p>
+      <ul class="list-disc ml-5">
+        <li>Description of the data collection, curation, and annotation processes</li>
+        <li>Availability of documentation with insights in the dataset content</li>
+        <li>Publicly accessible link to the dataset (e.g. Zenodo) and its DOI</li>
+        <li>Explanation of maintenance and long-term availability</li>
+        <li>Clear description of the envisioned use-cases</li>
+        <li>Application in which the dataset is used to solve an exemplar task</li>
+      </ul>
+
+      <h4 class="text-lg font-semibold title-font mt-6">Dataset revision contributions</h4>
+      <p class="leading-relaxed text-base">Besides entirely new datasets, we also encourage revisions of existing
+        datasets and their annotations. Revisions can be of any kind as below, but we welcome alternative
+        revisions:
+      </p>
+      <ul class="list-disc ml-5 mb-4">
+        <li>Revisited annotations with improved quality</li>
+        <li>Revisited data with improved quality</li>
+        <li>New annotations for an existing dataset enabling new tasks on it</li>
+      </ul>
+      <p>
+        Please clearly describe and illustrate what the problem is that the revision addresses, and how the
+        adopted approach yields a high quality dataset for downstream applications. Dataset and annotation
+        revisions are expected to be made public with a permissive license for wider use in the community.
+      </p>
+
+      <h3 class="text-xl font-bold title-font mt-6">IsGold? Track</h3>
+      <p class="leading-relaxed text-base">Since data quality matters this track opens a call for an open-ended
+        question: how do we assess the quality of semantic table annotation datasets? Manual inspection could be a key
+        solution to answer this question, but what about large-scale datasets? When each of which contains hundreds of
+        thousands of tables? Random-based checks could be an alternative but would it be a good enough solution? What
+        we
+        think is a promising solution is an automated way that runs specific tests on a given dataset. It then yields
+        insights.
+      </p>
+
+      <h3 class="text-xl font-bold title-font mt-6">STI vs. LLMs Track</h3>
+      <p class="leading-relaxed text-base">This track involves the usage of LLMs to perform the CEA task using
+        Wikidata. Participants will be asked to fine-tune an LLM using a dataset containing semantic annotations; we
+        can generate this dataset by mixing datasets from past challenge editions. Subsequently, an unannotated
+        validation set will be provided. We will use it to measure the quality of the approaches (with the usual metrics
+        used in
+        the challenge). This task considers several challenges, including identifying a way to inject the factual
+        knowledge of a KG within an LLM, determining methods to manage Wikidata Qids, enriching the training dataset
+        to increase the disambiguation capabilities of the LLM, and finally, building effective prompts to carry out
+        fine-tuning.
+      </p>
+
+      <h3 class="text-xl font-bold title-font mt-6">Only Metadata to KG Track</h3>
+      <p class="leading-relaxed text-base">This track asks participants to match table metadata only, e.g., column
+        names, to knowledge graphs without any access to table data and content. This is a challenging task due to the
+        limited available context that could be used by annotation systems to perform the semantic linking. LLMs are a
+        promising way to achieve such task that could be utilized in different ways.
+      </p>
+    </section>
+
+    <!-- Artifacts Availability Badge -->
+    <section class="py-6 flex justify-between container">
+      <div class="max-w-prose">
+        <h2 class="text-2xl font-bold bg-title">Artifacts Availability Badge</h2>
+        <p>Also this year we use Artifacts Availability Badge which is applicable to the Accuracy Track as well as the
+          Datasets Track.</p>
+        <p>
+          The goal of this badge is to motivate authors to publish and document their systems, code, and data, so that
+          others can use these artifacts and potentially reproduce or build on the results.
+        </p>
+        <p>
+          This badge is given if all resources are verified to satisfy the below criteria. The criteria used to assess
+          submissions (both accuracy and dataset submissions) are:
+        </p>
+        <ul class="list-disc ml-5 mb-4">
+          <li>Publicly accessible data (if applicable).</li>
+          <li>Publicly accessible source code.</li>
+          <li>Clear documentation of the code and data.</li>
+          <li>Open-source dependencies.</li>
+        </ul>
+      </div>
+      <div class="flex justify-center items-center bg-grid bg-left-bottom w-full justify-self-center self-stretch">
+        </span><img src="./imgs/badge.jpg" alt="Artifacts Availability Badge"
+             class="w-[145px]">
+      </div>
+    </section>
+
+    <!-- Paper Guidelines -->
+    <section class="py-6 container">
+      <h2 class="text-2xl font-bold bg-title">Paper Guidelines</h2>
+      <p>We invite participants in the Accuracy Track as well as the Datasets Track to submit a paper, using <a
+           href="https://easychair.org/my/conference?conf=semtab2023" target="_blank">easychair</a>.</p>
+      <p>
+        System papers in the Accuracy Track should be no more than 12 pages long (excluding references) and papers for
+        the Datasets Track are limited to 6 pages.
+        If you are submitting to the Datasets Track, please append "[Datasets Track]" at the end of the paper title.
+      </p>
+      <p>
+        Both type of papers should be formatted using the <a
+           href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw">CEUR
+          Latex template</a> or the <a
+           href="https://ceurws.wordpress.com/2020/03/31/ceurws-publishes-ceurart-paper-style/">CEUR Word
+          template</a>.
+        Papers will be
+        reviewed by 1-2 challenge organisers.
+      </p>
+      <p>
+        Accepted papers will be published as a volume of <a href="http://ceur-ws.org/">CEUR-WS</a>. By submitting a
+        paper, the authors accept the CEUR-WS
+        publishing rules.
+      </p>
+      <p>
+        We ask participants to describe their datasets through <a
+           href="https://easychair.org/conferences/?conf=semtab2023">easychair</a> in a short paper (max 6 pages) that
+        discusses how the respective criteria are covered, while also including a link to the resources. The link to
+        the
+        resources may be private, until the submission is evaluated by the SemTab organisers. See paper guidelines
+        below, for more details. More guidance for creating, documenting and publishing datasets can be found <a
+           href="https://neurips.cc/Conferences/2022/CallForDatasetsBenchmarks">here</a>.
+      </p>
+    </section>
+
+    <!-- Co-Chairs -->
+    <section class="py-6 bg-grid bg-left-bottom container">
+      <h2 class="text-2xl font-bold bg-title mb-2">Co-Chairs</h2>
+      <ul class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-2">
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:nora.abdelmageed@uni-jena.de" class="p-4 flex flex-col">
+            <strong>Nora Abdelmageed</strong>
+            <span class="text-slate-500">Friedrich SchillerUniversity Jena</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              nora.abdelmageed@uni-jena.de
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:hassanzadeh@us.ibm.com" class="p-4 flex flex-col">
+            <strong>Oktie Hassanzadeh</strong>
+            <span class="text-slate-500">IBM Research</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              hassanzadeh@us.ibm.com
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:marco.cremaschi@unimib.it" class="p-4 flex flex-col">
+            <strong>Marco Cremaschi</strong>
+            <span class="text-slate-500">University of Milan</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              marco.cremaschi@unimib.it
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:fabio.dadda@unimib.it" class="p-4 flex flex-col">
+            <strong>Fabio D'Adda</strong>
+            <span class="text-slate-500">University of Milan</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              fabio.dadda@unimib.it
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:b.b.kruit@vu.nl" class="p-4 flex flex-col">
+            <strong>Benno Kruit</strong>
+            <span class="text-slate-500">Vrije Universiteit Amsterdam</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              b.b.kruit@vu.nl
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:vincenzo.cutrona@supsi.ch" class="p-4 flex flex-col">
+            <strong>Vincenzo Cutrona</strong>
+            <span class="text-slate-500">SUPSI</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              vincenzo.cutrona@supsi.ch
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:vefthym@hua.gr" class="p-4 flex flex-col">
+            <strong>Vasilis Efthymiou</strong>
+            <span class="text-slate-500">Harokopio University of Athens</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              vefthym@hua.gr
+            </span>
+          </a>
+        </li>
+      </ul>
+      </p>
+    </section>
+
+    <!-- Steering Committee -->
+    <section class="py-6 container bg-grid">
+      <h2 class="text-2xl font-bold bg-title mb-2">Steering Committee</h2>
+      <ul class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-2">
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:jiaoyan.chen@manchester.ac.uk" class="p-4 flex flex-col">
+            <strong>Jiaoyan Chen</strong>
+            <span class="text-slate-500">The University of Manchester</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              jiaoyan.chen@manchester.ac.uk
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:madelon@berkeley.edu" class="p-4 flex flex-col">
+            <strong>Madelon Hulsebos</strong>
+            <span class="text-slate-500">UC Berkeley</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              madelon@berkeley.edu
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:ernesto.jimenez-ruiz@city.ac.uk" class="p-4 flex flex-col">
+            <strong>Ernesto Jimenez-Ruiz</strong>
+            <span class="text-slate-500">City, University of London, University of Oslo</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              ernesto.jimenez-ruiz@city.ac.uk
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:khatiwada.a@northeastern.edu" class="p-4 flex flex-col">
+            <strong>Aamod Khatiwada</strong>
+            <span class="text-slate-500">North-eastern University</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              khatiwada.a@northeastern.edu
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:kkorini@uni-mannheim.de" class="p-4 flex flex-col">
+            <strong>Keti Korini</strong>
+            <span class="text-slate-500">University of Mannheim</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              kkorini@uni-mannheim.de
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:juanfederico@gmail.com" class="p-4 flex flex-col">
+            <strong>Juan F. Sequeda</strong>
+            <span class="text-slate-500">data.world</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              juanfederico@gmail.com
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:Kavitha.Srinivas@ibm.com" class="p-4 flex flex-col">
+            <strong>Kavitha Srinivas</strong>
+            <span class="text-slate-500">IBM Research</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              Kavitha.Srinivas@ibm.com
+            </span>
+          </a>
+        </li>
+      </ul>
+      </p>
+    </section>
+
+    <!-- Acknowledgements -->
+    <section class="py-6 container">
+      <h2 class="text-2xl font-bold bg-title">Acknowledgements</h2>
+      <p>
+        The challenge is currently supported by the <a href="http://sirius-labs.no/">SIRIUS Centre for Research-driven
+          Innovation</a> and <a href="http://www.research.ibm.com/">IBM Research</a>.
+      </p>
+      <div
+           class="grid grid-cols-3 grid-rows-12 place-items-center place-content-center max-w-2xl mx-auto">
+        <a href=""
+           class="bg-card hover:bg-card-hover border-t border-l w-full h-full flex justify-center items-center row-span-3 rounded-ss-lg">
+          <img src="./imgs/Sirius logo.png"
+               alt="SIRIUS Centre for Research-driven Innovation"
+               class="w-full p-4 max-w-56">
+        </a>
+        <a href=""
+           class="bg-card hover:bg-card-hover border w-full h-full flex justify-center items-center  row-span-4">
+          <img src="./imgs/IBM logo small.svg"
+               alt="IBM Research"
+               class="w-full p-4 max-w-56">
+        </a>
+        <a href=""
+           class="bg-card hover:bg-card-hover border-r border-t w-full h-full flex justify-center items-center row-span-3 rounded-se-lg">
+          <img src="./imgs/Uva.png"
+               alt="University of Amsterdam"
+               class="w-full p-4 max-w-56">
+        </a>
+
+        <a href=""
+           class="bg-card hover:bg-card-hover border-t border-l w-full h-full flex justify-center items-center row-span-3">
+          <img src="./imgs/Data World.png"
+               alt="Data World"
+               class="w-full p-4 max-w-56">
+        </a>
+
+        <a href=""
+           class="bg-card hover:bg-card-hover border-r border-t w-full h-full flex justify-center items-center row-span-3">
+          <img src="./imgs/ICS Forth.jpg"
+               alt="ICS Forth"
+               class="w-full p-4 max-w-56">
+        </a>
+        <a href=""
+           class="bg-card hover:bg-card-hover border border-t-0 w-full h-full flex justify-center items-center row-span-4">
+          <img src="./imgs/ISWC 2023.png"
+               alt="ISWC 2023"
+               class="w-full p-4 max-w-56">
+        </a>
+
+
+        <a href=""
+           class="bg-card hover:bg-card-hover border-t border-l w-full h-full flex justify-center items-center row-span-3">
+          <img src="./imgs/Jena.png"
+               alt="Friedrich Schiller University Jena"
+               class="w-full p-4 max-w-56">
+        </a>
+
+        <a href=""
+           class="bg-card hover:bg-card-hover border-r border-t w-full h-full flex justify-center items-center row-span-3">
+          <img src="./imgs/Logo SUPSI.png"
+               alt="SUPSI"
+               class="w-full p-4 max-w-56">
+        </a>
+
+        <a href=""
+           class="bg-card hover:bg-card-hover border border-t-0 w-full h-full flex justify-center items-center row-span-4">
+          <img src="./imgs/Logo città.jpg"
+               alt="City University of London"
+               class="w-full p-4 max-w-56">
+        </a>
+
+        <a href=""
+           class="bg-card hover:bg-card-hover border border-r-0 er w-full h-full flex justify-center items-center row-span-3 rounded-es-lg">
+          <img src="./imgs/Oxford CS.jpg"
+               alt="University of Oxford"
+               class="w-full p-4 max-w-56">
+        </a>
+        <a href=""
+           class="bg-card hover:bg-card-hover border border-l-0 w-full h-full flex justify-center items-center row-span-3 rounded-ee-lg">
+          <img src="./imgs/Sigma.png"
+               alt="Sigma"
+               class="w-full p-4 max-w-56">
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <aside
+         id="date-card-container"
+         class="sticky bottom-0 sm:bottom-6 w-full sm:left-auto sm:right-6 sm:max-w-fit sm:ml-auto p-4 md:p-8 rounded-t-lg sm:rounded-lg bg-card border shadow-lg text-sm md:text-base transition-spacing duration-300">
+
+
+    <label for="checkbox-date-card" class="cursor-pointer flex items-center justify-between">
+      <div class="flex gap-2 items-center">
+        <h2 class="text-2xl font-bold bg-title">Important Dates</h2>
+        <span class="flex w-3 h-3 me-3 bg-red-500 rounded-full animate-pulse"></span>
+      </div>
+      <input checked="false" data-collapse-toggle="false" type="checkbox" id="checkbox-date-card"
+             name="checkbox-date-card"
+             class="hidden peer" />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round"
+           class="lucide lucide-chevron-up h-6 w-6 peer-checked:rotate-180 rotate-0 transition-transform duration-300">
+        <path d="m18 15-6-6-6 6" />
+      </svg>
+    </label>
+    </div>
+
+    <div class="grid grid-rows-1fr mt-4 transition-grid-template-rows duration-300" id="date-card">
+      <ul class="list-disc pl-5 overflow-hidden">
+        <li class="line-through text-slate-400">First Call for Challenge Participants: <span
+                class="font-bold">March 30, 2024</span></li>
+        <li>Round 1: <span class="font-bold text-primary">March 30, 2024 to April 20, 2024</span></li>
+        <li>Round 2: <span class="font-bold text-primary">May 04, 2024 to May 25, 2024</span></li>
+        <li>Paper Submission Deadline (Systems and Datasets): <span class="font-bold text-primary">June 28,
+            2024</span></li>
+        <li>System Results: <span class="font-bold text-primary">July 19, 2024</span></li>
+        <li>Participation invitations to present at ISWC 2024: <span class="font-bold text-primary">July 19,
+            2024</span></li>
+        <li>Submission of Final Papers: <span class="font-bold text-primary">September 15, 2024</span></li>
+        <li>Challenge presentation during OM workshop: <span class="font-bold text-primary">November 6-10, 2024
+          </span></li>
+        <li>Challenge presentation during ISWC: <span class="font-bold text-primary">November 6-10, 2024</span></li>
+      </ul>
+    </div>
+
+  </aside>
+
+  <script src="./js/main.min.js" defer></script>
+</body>
+
+</html>
