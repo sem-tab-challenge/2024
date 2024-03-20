@@ -10,11 +10,11 @@
 
 <body>
   <nav class="bg-grid bg-bottom z-20 sticky top-0 transition-all duration-300" id="nav-bar">
-    <div class="container flex flex-wrap items-center justify-between py-1">
+    <div class="container flex flex-wrap items-center justify-between py-1 relative">
       <a href="./"
          class="items-center space-x-3 rtl:space-x-reverse pointer-events-none opacity-0 transition-opacity duration-300"
          id="nav-brand">
-        <span class="self-center text-2xl font-bold whitespace-nowrap bg-title">SemTab 2024</span>
+        <span class="self-center text-2xl font-bold whitespace-nowrap bg-title animation-delay-200">SemTab 2024</span>
       </a>
 
       <button data-collapse-toggle="navbar-default" type="button"
@@ -28,18 +28,55 @@
         </svg>
       </button>
 
-      <div class="grid grid-rows-0fr transition-grid-template-rows w-full md:block md:ml-auto md:w-auto p-4"
+      <div class="grid grid-rows-0fr transition-grid-template-rows w-full md:block md:ml-auto md:w-auto p-4 md:p-0"
            id="navbar-content">
         <ul
             class="overflow-hidden font-semibold flex flex-col md:p-0 md:py-3 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:-mr-3">
           <li>
-            <a href="#"
-               class="block text-primary py-1.5 px-3 rounded-lg"
+            <a href="./"
+               class="block text-primary py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
                aria-current="page">Home</a>
           </li>
           <li>
-            <a href="#"
-               class="block py-1.5 px-3 text-foreground rounded-lg hover:bg-primary hover:text-primary-foreground">Tracks</a>
+            <label for="dropdown-toggle"
+                   class="py-1.5 px-3 text-foreground rounded-lg hover:bg-primary hover:text-primary-foreground flex items-center cursor-pointer has-[:checked]:bg-primary has-[:checked]:text-primary-foreground">
+              Tracks
+              <input type="checkbox" class="hidden peer" id="dropdown-toggle" name="dropdown-toggle" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-chevron-up h-6 w-6 peer-checked:rotate-0 rotate-180 transition-transform duration-300">
+                <path d="m18 15-6-6-6 6" />
+              </svg>
+            </label>
+
+            <!-- Dropdown menu -->
+            <div id="dropdown-content"
+                 class="z-10 absolute hidden top-16 right-0 bg-card divide-y divide-slate-200 rounded-lg shadow w-44">
+              <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButton">
+                <li>
+                  <a href="./tracks/accuracy-track.html"
+                     class="block px-4 py-2 hover:bg-card-hover">Accuracy</a>
+                </li>
+                <li>
+                  <a href="./tracks/sti-vs-llm-track.html"
+                     class="block px-4 py-2 hover:bg-card-hover">STI vs LLMs</a>
+                </li>
+                <li>
+                  <a href="./tracks/metadata-to-kg-track.html"
+                     class="block px-4 py-2 hover:bg-card-hover">Only Metadata to KG
+                  </a>
+                </li>
+                <li>
+                  <a href="./tracks/is-gold-track.html"
+                     class="block px-4 py-2 hover:bg-card-hover">IsGold?</a>
+                </li>
+                <li>
+                  <a href="./tracks/datasets-track.html"
+                     class="block px-4 py-2 hover:bg-card-hover">Datasets</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -52,7 +89,7 @@
       <div
            class="lg:flex-grow md:w-3/4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center md:min-w-prose">
         <h1
-            class="sm:text-6xl text-3xl mb-4 font-bold bg-title">
+            class="sm:text-6xl text-3xl mb-4 font-bold bg-title animation-delay-700">
           SemTab 2024</h1>
         <p class="mb-8 leading-relaxed">Semantic Web Challenge on Tabular Data to Knowledge Graph Matching</p>
         <div class="flex flex-col md:flex-row gap-2 justify-center">
@@ -73,11 +110,13 @@
   <main>
     <!-- About the Challenge -->
     <section class="py-6 container">
-      <h2 class="text-2xl font-bold bg-title">About the Challenge</h2>
+      <h2 class="text-2xl font-bold bg-title animation-delay-1000 mb-3">About the Challenge</h2>
       <p>Tabular data in the form of CSV files is the common input format in a data analytics pipeline. However, a
-        lack of understanding of the semantic structure and meaning of the content may hinder the data analytics process.
+        lack of understanding of the semantic structure and meaning of the content may hinder the data analytics
+        process.
         Thus gaining this semantic understanding will be very valuable for data integration, data cleaning, data
-        mining, machine learning and knowledge discovery tasks. For example, understanding what the data is can help assess
+        mining, machine learning and knowledge discovery tasks. For example, understanding what the data is can help
+        assess
         what sorts of transformation are appropriate on the data.
       </p>
       <p>
@@ -98,49 +137,102 @@
       <p>
         The 2024 edition of this challenge will be collocated with the <a
            href="https://iswc2024.semanticweb.org/event/3715c6fc-e2d7-47eb-8c01-5fe4ac589a52/summary"
-           target="_blank">23st International Semantic Web Conference</a> and the 19th International Workshop on Ontology Matching.
+           target="_blank">23st International Semantic Web Conference</a> and the 19th International Workshop on
+        Ontology Matching.
       </p>
     </section>
 
     <!-- Tracks -->
     <section class="py-6 container">
-      <h2 class="text-2xl font-bold mb-3 bg-title scroll-m-20" id="tracks">Challenge Tracks</h2>
+      <h2 class="text-2xl font-bold mb-3 bg-title animation-delay-75 scroll-m-20" id="tracks">Challenge Tracks</h2>
 
-      <h3 class="text-xl font-bold">Accuracy Track</h3>
+      <div class="flex items-center gap-1">
+        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+        <h3 class="text-xl font-bold">Accuracy Track</h3>
+      </div>
       <p>
         The evaluation of systems regarding accuracy is similar to prior versions of the SemTab.
-        That is, to illustrate the accuracy of the submissions, we evaluate systems on typical multi-class classification metrics as detailed below.
-        In addition, we adopt the "cscore" for the CTA task to reflect the distance in the type hierarchy between the predicted column type and the ground truth semantic type.
+        That is, to illustrate the accuracy of the submissions, we evaluate systems on typical multi-class
+        classification metrics as detailed below.
+        In addition, we adopt the "cscore" for the CTA task to reflect the distance in the type hierarchy between the
+        predicted column type and the ground truth semantic type.
       </p>
       <p>
         Matching Tasks:
       </p>
-      <ul class="list-disc ml-5 ">
-        <li><strong>CTA Task</strong>: Assigning a semantic type (a DBpedia class as fine-grained as possible) to a column</li>
+      <ul class="list-disc ml-5 mb-4">
+        <li><strong>CTA Task</strong>: Assigning a semantic type (a DBpedia class as fine-grained as possible) to a
+          column</li>
         <li><strong>CEA Task</strong>: Matching a cell to a Wikidata entity</li>
         <li><strong>CPA Task</strong>: Assigning a KG property to the relationship between two columns</li>
         <li><strong>Table Topic Detection</strong>: Assigning a KG class to a table</li>
-        <li><strong>Column-Qualifier Annotation</strong>: Predicting both main properties and qualifiers for n-ary relations that are expressed by three table columns</li>
+        <li><strong>Column-Qualifier Annotation</strong>: Predicting both main properties and qualifiers for n-ary
+          relations that are expressed by three table columns</li>
       </ul>
+      <a href="./tracks/accuracy-track.html"
+         class="inline-flex items-center gap-1 text-primary-foreground bg-primary border-0 py-2 px-4 pr-3 focus:outline-none hover:bg-primary/80 rounded-md">
+        <span>Track page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+             class="lucide lucide-move-right">
+          <path d="M18 8L22 12L18 16" />
+          <path d="M2 12H22" />
+        </svg>
+      </a>
 
-      <h3 class="text-xl font-bold title-font mt-6">STI vs LLMs Track</h3>
-      <p class="leading-relaxed text-base">This track involves the usage of LLMs to perform the CEA task using Wikidata. Participants will be asked to fine-tune an LLM using a dataset containing semantic annotations. Subsequently, an unannotated validation set will be provided to measure the quality of the approaches (with the usual metrics used in the previous edition of this challenge). This task considers several challenges, including identifying a way to inject the factual knowledge of a KG within an LLM, determining methods to manage Wikidata Qids, enriching the training dataset to increase the disambiguation capabilities of the LLM, and finally, building effective prompts to carry out fine-tuning.
+      <div class="flex items-center gap-1 mt-6">
+        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+        <h3 class="text-xl font-bold title-font">STI vs LLMs Track</h3>
+      </div>
+      <p class="leading-relaxed text-base">This track involves the usage of LLMs to perform the CEA task using Wikidata.
+        Participants will be asked to fine-tune an LLM using a dataset containing semantic annotations. Subsequently, an
+        unannotated validation set will be provided to measure the quality of the approaches (with the usual metrics
+        used in the previous edition of this challenge). This task considers several challenges, including identifying a
+        way to inject the factual knowledge of a KG within an LLM, determining methods to manage Wikidata Qids,
+        enriching the training dataset to increase the disambiguation capabilities of the LLM, and finally, building
+        effective prompts to carry out fine-tuning.
       </p>
-        <p>
-          Matching Tasks:
-        </p>
-        <ul class="list-disc ml-5 ">
-          <li><strong>CEA Task</strong>: Matching a cell to a Wikidata entity</li>
-        </ul>
+      <p>
+        Matching Tasks:
+      </p>
+      <ul class="list-disc ml-5 mb-4">
+        <li><strong>CEA Task</strong>: Matching a cell to a Wikidata entity</li>
+      </ul>
+      <a href="./tracks/sti-vs-llm-track.html"
+         class="inline-flex items-center gap-1 text-primary-foreground bg-primary border-0 py-2 px-4 pr-3 focus:outline-none hover:bg-primary/80 rounded-md">
+        <span>Track page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+             class="lucide lucide-move-right">
+          <path d="M18 8L22 12L18 16" />
+          <path d="M2 12H22" />
+        </svg>
+      </a>
 
-      <h3 class="text-xl font-bold title-font mt-6">Only Metadata to KG Track [TBU]</h3>
+      <div class="flex items-center gap-1 mt-6">
+        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+        <h3 class="text-xl font-bold title-font">Only Metadata to KG Track [TBU]</h3>
+      </div>
       <p class="leading-relaxed text-base">This track asks participants to match table metadata only, e.g., column
-        names, to KGs without any access to table data and content. This is a challenging task due to the
+        names, to knowledge graphs without any access to table data and content. This is a challenging task due to the
         limited available context that could be used by annotation systems to perform the semantic linking. LLMs are a
         promising way to achieve such task that could be utilized in different ways.
       </p>
+      <a href="./tracks/metadata-to-kg-track.html"
+         class="inline-flex items-center gap-1 text-primary-foreground bg-primary border-0 py-2 px-4 pr-3 focus:outline-none hover:bg-primary/80 rounded-md">
+        <span>Track page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+             class="lucide lucide-move-right">
+          <path d="M18 8L22 12L18 16" />
+          <path d="M2 12H22" />
+        </svg>
+      </a>
 
-      <h3 class="text-xl font-bold title-font mt-6">IsGold? Track [TBU]</h3>
+      <div class="flex items-center gap-1 mt-6">
+        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+        <h3 class="text-xl font-bold title-font">IsGold? Track [TBU]</h3>
+      </div>
       <p class="leading-relaxed text-base">Since data quality matters this track opens a call for an open-ended
         question: how do we assess the quality of semantic table annotation datasets? Manual inspection could be a key
         solution to answer this question, but what about large-scale datasets? When each of which contains hundreds of
@@ -148,8 +240,21 @@
         we think is a promising solution is an automated way that runs specific tests on a given dataset. It then yields
         insights.
       </p>
+      <a href="./tracks/is-gold-track.html"
+         class="inline-flex items-center gap-1 text-primary-foreground bg-primary border-0 py-2 px-4 pr-3 focus:outline-none hover:bg-primary/80 rounded-md">
+        <span>Track page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+             class="lucide lucide-move-right">
+          <path d="M18 8L22 12L18 16" />
+          <path d="M2 12H22" />
+        </svg>
+      </a>
 
-      <h3 class="text-xl font-bold mt-6">Datasets Track</h3>
+      <div class="flex items-center gap-1 mt-6">
+        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+        <h3 class="text-xl font-bold">Datasets Track</h3>
+      </div>
       <h4 class="text-lg font-semibold title-font mb-2">New dataset contributions</h4>
       <p class="leading-relaxed text-base">The data that table-to-Knowledge-Graph matching systems are trained and
         evaluated on, is critical for their accuracy and relevance.
@@ -185,12 +290,22 @@
         adopted approach yields a high quality dataset for downstream applications. Dataset and annotation
         revisions are expected to be made public with a permissive license for wider use in the community.
       </p>
+      <a href="./tracks/datasets-track.html"
+         class="inline-flex items-center gap-1 text-primary-foreground bg-primary border-0 py-2 px-4 pr-3 focus:outline-none hover:bg-primary/80 rounded-md">
+        <span>Track page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+             class="lucide lucide-move-right">
+          <path d="M18 8L22 12L18 16" />
+          <path d="M2 12H22" />
+        </svg>
+      </a>
     </section>
 
     <!-- Artifacts Availability Badge -->
     <section class="py-6 flex justify-between container">
       <div class="max-w-prose">
-        <h2 class="text-2xl font-bold bg-title">Artifacts Availability Badge</h2>
+        <h2 class="text-2xl font-bold bg-title animation-delay-200 mb-3">Artifacts Availability Badge</h2>
         <p>Also this year we use Artifacts Availability Badge which is applicable to the Accuracy Track as well as the
           Datasets Track.</p>
         <p>
@@ -209,36 +324,47 @@
         </ul>
       </div>
       <div class="flex justify-center items-center bg-grid bg-left-bottom w-full justify-self-center self-stretch">
-        </span><img src="./imgs/badge.png" alt="Artifacts Availability Badge"
+        </span><img src="./imgs/badge.jpg" alt="Artifacts Availability Badge"
              class="w-[145px]">
       </div>
     </section>
 
     <!-- Paper Guidelines -->
     <section class="py-6 container">
-      <h2 class="text-2xl font-bold bg-title">Paper Guidelines</h2>
-      <p>We invite participants to submit a paper, using <a href="https://easychair.org/my/conference?conf=semtab2024" target="_blank">easychair</a>.</p>
+      <h2 class="text-2xl font-bold  animation-delay-150 mb-3">Paper Guidelines</h2>
+      <p>We invite participants to submit a paper, using <a href="https://easychair.org/my/conference?conf=semtab2024"
+           target="_blank">easychair</a>.</p>
       <p>
-        System papers in the Accuracy, STI vs LLM, Only Metadata to KG, IsGold? Tracks should be no more than 12 pages long (excluding references) and papers for
-        the Datasets Track are limited to 6 pages. If you are submitting to the Datasets Track, please append "[Datasets Track]" at the end of the paper title.
+        System papers in the Accuracy Track should be no more than 12 pages long (excluding references) and papers for
+        the Datasets Track are limited to 6 pages.
+        If you are submitting to the Datasets Track, please append "[Datasets Track]" at the end of the paper title.
       </p>
       <p>
-        Papers should be formatted using the <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw">CEUR
-          Latex template</a> or the <a href="https://ceurws.wordpress.com/2020/03/31/ceurws-publishes-ceurart-paper-style/">CEUR Word template</a>.
+        Both type of papers should be formatted using the <a
+           href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw">CEUR
+          Latex template</a> or the <a
+           href="https://ceurws.wordpress.com/2020/03/31/ceurws-publishes-ceurart-paper-style/">CEUR Word template</a>.
         Papers will be reviewed by 1-2 challenge organisers.
       </p>
       <p>
         Accepted papers will be published as a volume of <a href="http://ceur-ws.org/">CEUR-WS</a>. By submitting a
-        paper, the authors accept the CEUR-WS publishing rules.
+        paper, the authors accept the CEUR-WS
+        publishing rules.
       </p>
       <p>
-        Information on the structure of the papers will be provided on the tracks pages.
+        We ask participants to describe their datasets through <a
+           href="https://easychair.org/conferences/?conf=semtab2023">easychair</a> in a short paper (max 6 pages) that
+        discusses how the respective criteria are covered, while also including a link to the resources. The link to
+        the
+        resources may be private, until the submission is evaluated by the SemTab organisers. See paper guidelines
+        below, for more details. More guidance for creating, documenting and publishing datasets can be found <a
+           href="https://neurips.cc/Conferences/2022/CallForDatasetsBenchmarks">here</a>.
       </p>
     </section>
 
     <!-- Co-Chairs -->
     <section class="py-6 bg-grid bg-left-bottom container">
-      <h2 class="text-2xl font-bold bg-title mb-2">Co-Chairs</h2>
+      <h2 class="text-2xl font-bold bg-title animation-delay-75 mb-3">Co-Chairs</h2>
       <ul class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-2">
         <li class="border rounded-md bg-card hover:bg-card-hover">
           <a href="mailto:nora.abdelmageed@uni-jena.de" class="p-4 flex flex-col">
@@ -351,7 +477,7 @@
 
     <!-- Steering Committee -->
     <section class="py-6 container bg-grid">
-      <h2 class="text-2xl font-bold bg-title mb-2">Steering Committee</h2>
+      <h2 class="text-2xl font-bold bg-title animation-delay-100 mb-3">Steering Committee</h2>
       <ul class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-2">
         <li class="border rounded-md bg-card hover:bg-card-hover">
           <a href="mailto:jiaoyan.chen@manchester.ac.uk" class="p-4 flex flex-col">
@@ -464,27 +590,27 @@
 
     <!-- Acknowledgements -->
     <section class="py-6 container">
-      <h2 class="text-2xl font-bold bg-title">Acknowledgements</h2>
+      <h2 class="text-2xl font-bold bg-title animation-delay-500 mb-3">Acknowledgements</h2>
       <p>
         The challenge is currently supported by the <a href="http://sirius-labs.no/">SIRIUS Centre for Research-driven
           Innovation</a> and <a href="http://www.research.ibm.com/">IBM Research</a>.
       </p>
       <div
-           class="grid grid-cols-3 grid-rows-12 place-items-center place-content-center max-w-2xl mx-auto">
+           class="grid grid-cols-3 place-content-center place-items-center max-w-2xl">
         <a href=""
-           class="bg-card hover:bg-card-hover border-t border-l w-full h-full flex justify-center items-center row-span-3 rounded-ss-lg">
+           class="bg-card hover:bg-card-hover border border-r-0 w-full h-full flex justify-center items-center">
           <img src="./imgs/Sirius logo.png"
                alt="SIRIUS Centre for Research-driven Innovation"
                class="w-full p-4 max-w-56">
         </a>
         <a href=""
-           class="bg-card hover:bg-card-hover border w-full h-full flex justify-center items-center  row-span-4">
+           class="bg-card hover:bg-card-hover border w-full h-full flex justify-center items-center">
           <img src="./imgs/IBM logo small.svg"
                alt="IBM Research"
                class="w-full p-4 max-w-56">
         </a>
         <a href=""
-           class="bg-card hover:bg-card-hover border border-t-0 w-full h-full flex justify-center items-center row-span-4">
+           class="bg-card hover:bg-card-hover border border-l-0 w-full h-full flex justify-center items-center">
           <img src="./imgs/iswc.webp"
                alt="ISWC 2023"
                class="w-full p-4 max-w-56">
@@ -500,7 +626,7 @@
 
     <label for="checkbox-date-card" class="cursor-pointer flex items-center justify-between">
       <div class="flex gap-2 items-center">
-        <h2 class="text-2xl font-bold bg-title">Important Dates</h2>
+        <h2 class="text-2xl font-bold bg-title animation-delay-300">Important Dates</h2>
         <span class="flex w-3 h-3 me-3 bg-red-500 rounded-full animate-pulse"></span>
       </div>
       <input checked="false" data-collapse-toggle="false" type="checkbox" id="checkbox-date-card"
@@ -517,13 +643,18 @@
     <div class="grid grid-rows-1fr mt-4 transition-grid-template-rows duration-300" id="date-card">
       <ul class="list-disc pl-5 overflow-hidden">
         <li>First Call for Challenge Participants: <span class="font-bold text-primary">March 30, 2024</span></li>
-        <li>Round 1: <span class="font-bold text-primary">March 30, 2024</span> to <span class="font-bold text-primary">April 20, 2024</span></li>
-        <li>Round 2: <span class="font-bold text-primary">May 04, 2024</span> to <span class="font-bold text-primary">May 25, 2024</span></li>
-        <li>Paper Submission Deadline (Systems and Datasets): <span class="font-bold text-primary">June 28, 2024</span></li>
+        <li>Round 1: <span class="font-bold text-primary">March 30, 2024</span> to <span
+                class="font-bold text-primary">April 20, 2024</span></li>
+        <li>Round 2: <span class="font-bold text-primary">May 04, 2024</span> to <span
+                class="font-bold text-primary">May 25, 2024</span></li>
+        <li>Paper Submission Deadline (Systems and Datasets): <span class="font-bold text-primary">June 28, 2024</span>
+        </li>
         <li>System Results: <span class="font-bold text-primary">July 19, 2024</span></li>
-        <li>Participation invitations to present at ISWC 2024: <span class="font-bold text-primary">July 19, 2024</span></li>
+        <li>Participation invitations to present at ISWC 2024: <span class="font-bold text-primary">July 19, 2024</span>
+        </li>
         <li>Submission of Final Papers: <span class="font-bold text-primary">September 15, 2024</span></li>
-        <li>Challenge presentation during OM workshop: <span class="font-bold text-primary">November 6-10, 2024</span></li>
+        <li>Challenge presentation during OM workshop: <span class="font-bold text-primary">November 6-10, 2024</span>
+        </li>
         <li>Challenge presentation during ISWC: <span class="font-bold text-primary">November 6-10, 2024</span></li>
       </ul>
     </div>

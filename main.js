@@ -9,6 +9,14 @@ const toggleNavbar = () => {
 const navbarToggle = document.querySelector("#navbar-toggle");
 navbarToggle.addEventListener("click", toggleNavbar);
 
+const toggleDropdown = () => {
+  const dropdownContent = document.querySelector("#dropdown-content");
+
+  dropdownContent.classList.toggle("hidden");
+};
+const dropdownToggle = document.querySelector("#dropdown-toggle");
+dropdownToggle.addEventListener("click", toggleDropdown);
+
 const toggleDateCard = () => {
   const dateCard = document.querySelector("#date-card");
   const dateCardContainer = document.querySelector("#date-card-container");

@@ -1,7 +1,7 @@
 {
 	"scripts": {
-		"dev": "tailwindcss -i ./global.css -o ./dist/css/style.min.css --watch --minify",
-		"minify": "minify ./main.js > ./dist/js/main.min.js"
+		"dev": "tailwindcss -i ./global.css -o ./docs/css/style.min.css --watch --minify",
+		"minify": "minify ./main.js > ./docs/js/main.min.js"
 	},
 	"dependencies": {
 		"tailwindcss": "^3.4.1"

@@ -112,6 +112,9 @@
 }
 
 @layer components {
+  .bg-move {
+    @apply bg-gradient-to-r from-violet-600 via-indigo-600 to-yellow-600 animate-background-move bg-400%;
+  }
   .bg-title {
     @apply bg-gradient-to-r from-violet-600 via-indigo-600 to-yellow-600 bg-clip-text inline-block text-transparent animate-background-move bg-400%;
   }
