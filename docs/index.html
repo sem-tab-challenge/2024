@@ -39,11 +39,7 @@
           </li>
           <li>
             <a href="#"
-               class="block py-1.5 px-3 text-foreground rounded-lg hover:bg-primary hover:text-primary-foreground">Home</a>
-          </li>
-          <li>
-            <a href="#"
-               class="block py-1.5 px-3 text-foreground rounded-lg hover:bg-primary hover:text-primary-foreground">Traks</a>
+               class="block py-1.5 px-3 text-foreground rounded-lg hover:bg-primary hover:text-primary-foreground">Tracks</a>
           </li>
         </ul>
       </div>
@@ -79,36 +75,30 @@
     <section class="py-6 container">
       <h2 class="text-2xl font-bold bg-title">About the Challenge</h2>
       <p>Tabular data in the form of CSV files is the common input format in a data analytics pipeline. However, a
-        lack
-        of understanding of the semantic structure and meaning of the content may hinder the data analytics process.
+        lack of understanding of the semantic structure and meaning of the content may hinder the data analytics process.
         Thus gaining this semantic understanding will be very valuable for data integration, data cleaning, data
-        mining,
-        machine learning and knowledge discovery tasks. For example, understanding what the data is can help assess
-        what
-        sorts of transformation are appropriate on the data.
+        mining, machine learning and knowledge discovery tasks. For example, understanding what the data is can help assess
+        what sorts of transformation are appropriate on the data.
       </p>
       <p>
         Tables on the Web may also be the source of highly valuable data. The addition of semantic information to Web
-        tables may enhance a wide range of applications, such as web search, question answering, and knowledge base
-        (KB)
-        construction.
+        tables may enhance a wide range of applications, such as web search, question answering, and Knowledge Base
+        (KB) construction.
       </p>
       <p>
-        Tabular data to Knowledge Graph (KG) matching is the process of assigning semantic tags from Knowledge Graphs
+        Tabular data to Knowledge Graph (KG) matching is the process of assigning semantic tags from KGs
         (e.g., Wikidata or DBpedia) to the elements of the table. This task however is often difficult in practice due
         to metadata (e.g., table and column names) being missing, incomplete or ambiguous.
       </p>
       <p>
         The <a href="http://www.cs.ox.ac.uk/isg/challenges/sem-tab/" target="_blank">SemTab challenge</a> aims at
         benchmarking systems dealing with the tabular data to KG matching problem, so as to facilitate their
-        comparison
-        on the same basis and the reproducibility of the results.
+        comparison on the same basis and the reproducibility of the results.
       </p>
       <p>
         The 2024 edition of this challenge will be collocated with the <a
            href="https://iswc2024.semanticweb.org/event/3715c6fc-e2d7-47eb-8c01-5fe4ac589a52/summary"
-           target="_blank">23st International Semantic Web Conference</a> and the 19th International Workshop on
-        Ontology Matching.
+           target="_blank">23st International Semantic Web Conference</a> and the 19th International Workshop on Ontology Matching.
       </p>
     </section>
 
@@ -119,24 +109,45 @@
       <h3 class="text-xl font-bold">Accuracy Track</h3>
       <p>
         The evaluation of systems regarding accuracy is similar to prior versions of the SemTab.
-        That is, to illustrate the accuracy of the submissions, we evaluate systems on typical multi-class
-        classification metrics as detailed below.
-        In addition, we adopt the "cscore" for the CTA task to reflect the distance in the type hierarchy between the
-        predicted column type and the ground truth semantic type.
+        That is, to illustrate the accuracy of the submissions, we evaluate systems on typical multi-class classification metrics as detailed below.
+        In addition, we adopt the "cscore" for the CTA task to reflect the distance in the type hierarchy between the predicted column type and the ground truth semantic type.
       </p>
       <p>
         Matching Tasks:
       </p>
       <ul class="list-disc ml-5 ">
-        <li><strong>CTA Task</strong>: Assigning a semantic type (a DBpedia class as fine-grained as possible)to
-          a column</li>
+        <li><strong>CTA Task</strong>: Assigning a semantic type (a DBpedia class as fine-grained as possible) to a column</li>
         <li><strong>CEA Task</strong>: Matching a cell to a Wikidata entity</li>
         <li><strong>CPA Task</strong>: Assigning a KG property to the relationship between two columns</li>
         <li><strong>Table Topic Detection</strong>: Assigning a KG class to a table</li>
-        <li><strong>Column-Qualifier Annotation</strong>: Predicting both main properties and qualifiers for n-ary
-          relations that are expressed by three table columns</li>
+        <li><strong>Column-Qualifier Annotation</strong>: Predicting both main properties and qualifiers for n-ary relations that are expressed by three table columns</li>
       </ul>
 
+      <h3 class="text-xl font-bold title-font mt-6">STI vs LLMs Track</h3>
+      <p class="leading-relaxed text-base">This track involves the usage of LLMs to perform the CEA task using Wikidata. Participants will be asked to fine-tune an LLM using a dataset containing semantic annotations. Subsequently, an unannotated validation set will be provided to measure the quality of the approaches (with the usual metrics used in the previous edition of this challenge). This task considers several challenges, including identifying a way to inject the factual knowledge of a KG within an LLM, determining methods to manage Wikidata Qids, enriching the training dataset to increase the disambiguation capabilities of the LLM, and finally, building effective prompts to carry out fine-tuning.
+      </p>
+        <p>
+          Matching Tasks:
+        </p>
+        <ul class="list-disc ml-5 ">
+          <li><strong>CEA Task</strong>: Matching a cell to a Wikidata entity</li>
+        </ul>
+
+      <h3 class="text-xl font-bold title-font mt-6">Only Metadata to KG Track [TBU]</h3>
+      <p class="leading-relaxed text-base">This track asks participants to match table metadata only, e.g., column
+        names, to knowledge graphs without any access to table data and content. This is a challenging task due to the
+        limited available context that could be used by annotation systems to perform the semantic linking. LLMs are a
+        promising way to achieve such task that could be utilized in different ways.
+      </p>
+
+      <h3 class="text-xl font-bold title-font mt-6">IsGold? Track [TBU]</h3>
+      <p class="leading-relaxed text-base">Since data quality matters this track opens a call for an open-ended
+        question: how do we assess the quality of semantic table annotation datasets? Manual inspection could be a key
+        solution to answer this question, but what about large-scale datasets? When each of which contains hundreds of
+        thousands of tables? Random-based checks could be an alternative but would it be a good enough solution? What
+        we think is a promising solution is an automated way that runs specific tests on a given dataset. It then yields
+        insights.
+      </p>
 
       <h3 class="text-xl font-bold mt-6">Datasets Track</h3>
       <h4 class="text-lg font-semibold title-font mb-2">New dataset contributions</h4>
@@ -153,7 +164,7 @@
       <ul class="list-disc ml-5">
         <li>Description of the data collection, curation, and annotation processes</li>
         <li>Availability of documentation with insights in the dataset content</li>
-        <li>Publicly accessible link to the dataset (e.g. Zenodo) and its DOI</li>
+        <li>Publicly accessible link to the dataset (e.g., Zenodo) and its DOI</li>
         <li>Explanation of maintenance and long-term availability</li>
         <li>Clear description of the envisioned use-cases</li>
         <li>Application in which the dataset is used to solve an exemplar task</li>
@@ -174,35 +185,6 @@
         adopted approach yields a high quality dataset for downstream applications. Dataset and annotation
         revisions are expected to be made public with a permissive license for wider use in the community.
       </p>
-
-      <h3 class="text-xl font-bold title-font mt-6">IsGold? Track</h3>
-      <p class="leading-relaxed text-base">Since data quality matters this track opens a call for an open-ended
-        question: how do we assess the quality of semantic table annotation datasets? Manual inspection could be a key
-        solution to answer this question, but what about large-scale datasets? When each of which contains hundreds of
-        thousands of tables? Random-based checks could be an alternative but would it be a good enough solution? What
-        we
-        think is a promising solution is an automated way that runs specific tests on a given dataset. It then yields
-        insights.
-      </p>
-
-      <h3 class="text-xl font-bold title-font mt-6">STI vs. LLMs Track</h3>
-      <p class="leading-relaxed text-base">This track involves the usage of LLMs to perform the CEA task using
-        Wikidata. Participants will be asked to fine-tune an LLM using a dataset containing semantic annotations; we
-        can generate this dataset by mixing datasets from past challenge editions. Subsequently, an unannotated
-        validation set will be provided. We will use it to measure the quality of the approaches (with the usual metrics
-        used in
-        the challenge). This task considers several challenges, including identifying a way to inject the factual
-        knowledge of a KG within an LLM, determining methods to manage Wikidata Qids, enriching the training dataset
-        to increase the disambiguation capabilities of the LLM, and finally, building effective prompts to carry out
-        fine-tuning.
-      </p>
-
-      <h3 class="text-xl font-bold title-font mt-6">Only Metadata to KG Track</h3>
-      <p class="leading-relaxed text-base">This track asks participants to match table metadata only, e.g., column
-        names, to knowledge graphs without any access to table data and content. This is a challenging task due to the
-        limited available context that could be used by annotation systems to perform the semantic linking. LLMs are a
-        promising way to achieve such task that could be utilized in different ways.
-      </p>
     </section>
 
     <!-- Artifacts Availability Badge -->
@@ -220,10 +202,10 @@
           submissions (both accuracy and dataset submissions) are:
         </p>
         <ul class="list-disc ml-5 mb-4">
-          <li>Publicly accessible data (if applicable).</li>
-          <li>Publicly accessible source code.</li>
-          <li>Clear documentation of the code and data.</li>
-          <li>Open-source dependencies.</li>
+          <li>Publicly accessible data (if applicable)</li>
+          <li>Publicly accessible source code</li>
+          <li>Clear documentation of the code and data</li>
+          <li>Open-source dependencies</li>
         </ul>
       </div>
       <div class="flex justify-center items-center bg-grid bg-left-bottom w-full justify-self-center self-stretch">
@@ -235,21 +217,16 @@
     <!-- Paper Guidelines -->
     <section class="py-6 container">
       <h2 class="text-2xl font-bold bg-title">Paper Guidelines</h2>
-      <p>We invite participants in the Accuracy Track as well as the Datasets Track to submit a paper, using <a
-           href="https://easychair.org/my/conference?conf=semtab2023" target="_blank">easychair</a>.</p>
+      <p>We invite participants to submit a paper, using <a href="https://easychair.org/my/conference?conf=semtab2024" target="_blank">easychair</a>.</p>
       <p>
         System papers in the Accuracy Track should be no more than 12 pages long (excluding references) and papers for
         the Datasets Track are limited to 6 pages.
         If you are submitting to the Datasets Track, please append "[Datasets Track]" at the end of the paper title.
       </p>
       <p>
-        Both type of papers should be formatted using the <a
-           href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw">CEUR
-          Latex template</a> or the <a
-           href="https://ceurws.wordpress.com/2020/03/31/ceurws-publishes-ceurart-paper-style/">CEUR Word
-          template</a>.
-        Papers will be
-        reviewed by 1-2 challenge organisers.
+        Both type of papers should be formatted using the <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw">CEUR
+          Latex template</a> or the <a href="https://ceurws.wordpress.com/2020/03/31/ceurws-publishes-ceurart-paper-style/">CEUR Word template</a>.
+        Papers will be reviewed by 1-2 challenge organisers.
       </p>
       <p>
         Accepted papers will be published as a volume of <a href="http://ceur-ws.org/">CEUR-WS</a>. By submitting a
@@ -287,24 +264,9 @@
           </a>
         </li>
         <li class="border rounded-md bg-card hover:bg-card-hover">
-          <a href="mailto:hassanzadeh@us.ibm.com" class="p-4 flex flex-col">
-            <strong>Oktie Hassanzadeh</strong>
-            <span class="text-slate-500">IBM Research</span>
-            <span class="text-sm flex items-center gap-1 mt-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   class="lucide lucide-mail">
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-              hassanzadeh@us.ibm.com
-            </span>
-          </a>
-        </li>
-        <li class="border rounded-md bg-card hover:bg-card-hover">
           <a href="mailto:marco.cremaschi@unimib.it" class="p-4 flex flex-col">
             <strong>Marco Cremaschi</strong>
-            <span class="text-slate-500">University of Milan</span>
+            <span class="text-slate-500">University of Milan - Bicocca</span>
             <span class="text-sm flex items-center gap-1 mt-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -313,36 +275,6 @@
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
               </svg>
               marco.cremaschi@unimib.it
-            </span>
-          </a>
-        </li>
-        <li class="border rounded-md bg-card hover:bg-card-hover">
-          <a href="mailto:fabio.dadda@unimib.it" class="p-4 flex flex-col">
-            <strong>Fabio D'Adda</strong>
-            <span class="text-slate-500">University of Milan</span>
-            <span class="text-sm flex items-center gap-1 mt-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   class="lucide lucide-mail">
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-              fabio.dadda@unimib.it
-            </span>
-          </a>
-        </li>
-        <li class="border rounded-md bg-card hover:bg-card-hover">
-          <a href="mailto:b.b.kruit@vu.nl" class="p-4 flex flex-col">
-            <strong>Benno Kruit</strong>
-            <span class="text-slate-500">Vrije Universiteit Amsterdam</span>
-            <span class="text-sm flex items-center gap-1 mt-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   class="lucide lucide-mail">
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-              b.b.kruit@vu.nl
             </span>
           </a>
         </li>
@@ -362,6 +294,21 @@
           </a>
         </li>
         <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:fabio.dadda@unimib.it" class="p-4 flex flex-col">
+            <strong>Fabio D'Adda</strong>
+            <span class="text-slate-500">University of Milan - Bicocca</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              fabio.dadda@unimib.it
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
           <a href="mailto:vefthym@hua.gr" class="p-4 flex flex-col">
             <strong>Vasilis Efthymiou</strong>
             <span class="text-slate-500">Harokopio University of Athens</span>
@@ -373,6 +320,36 @@
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
               </svg>
               vefthym@hua.gr
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:hassanzadeh@us.ibm.com" class="p-4 flex flex-col">
+            <strong>Oktie Hassanzadeh</strong>
+            <span class="text-slate-500">IBM Research</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              hassanzadeh@us.ibm.com
+            </span>
+          </a>
+        </li>
+        <li class="border rounded-md bg-card hover:bg-card-hover">
+          <a href="mailto:b.b.kruit@vu.nl" class="p-4 flex flex-col">
+            <strong>Benno Kruit</strong>
+            <span class="text-slate-500">Vrije Universiteit Amsterdam</span>
+            <span class="text-sm flex items-center gap-1 mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              b.b.kruit@vu.nl
             </span>
           </a>
         </li>
@@ -536,7 +513,7 @@
         </a>
         <a href=""
            class="bg-card hover:bg-card-hover border border-t-0 w-full h-full flex justify-center items-center row-span-4">
-          <img src="./imgs/ISWC 2023.png"
+          <img src="./imgs/iswc.webp"
                alt="ISWC 2023"
                class="w-full p-4 max-w-56">
         </a>
@@ -602,18 +579,14 @@
 
     <div class="grid grid-rows-1fr mt-4 transition-grid-template-rows duration-300" id="date-card">
       <ul class="list-disc pl-5 overflow-hidden">
-        <li class="line-through text-slate-400">First Call for Challenge Participants: <span
-                class="font-bold">March 30, 2024</span></li>
-        <li>Round 1: <span class="font-bold text-primary">March 30, 2024 to April 20, 2024</span></li>
-        <li>Round 2: <span class="font-bold text-primary">May 04, 2024 to May 25, 2024</span></li>
-        <li>Paper Submission Deadline (Systems and Datasets): <span class="font-bold text-primary">June 28,
-            2024</span></li>
+        <li>First Call for Challenge Participants: <span class="font-bold text-primary">March 30, 2024</span></li>
+        <li>Round 1: <span class="font-bold text-primary">March 30, 2024</span> to <span class="font-bold text-primary">April 20, 2024</span></li>
+        <li>Round 2: <span class="font-bold text-primary">May 04, 2024</span> to <span class="font-bold text-primary">May 25, 2024</span></li>
+        <li>Paper Submission Deadline (Systems and Datasets): <span class="font-bold text-primary">June 28, 2024</span></li>
         <li>System Results: <span class="font-bold text-primary">July 19, 2024</span></li>
-        <li>Participation invitations to present at ISWC 2024: <span class="font-bold text-primary">July 19,
-            2024</span></li>
+        <li>Participation invitations to present at ISWC 2024: <span class="font-bold text-primary">July 19, 2024</span></li>
         <li>Submission of Final Papers: <span class="font-bold text-primary">September 15, 2024</span></li>
-        <li>Challenge presentation during OM workshop: <span class="font-bold text-primary">November 6-10, 2024
-          </span></li>
+        <li>Challenge presentation during OM workshop: <span class="font-bold text-primary">November 6-10, 2024</span></li>
         <li>Challenge presentation during ISWC: <span class="font-bold text-primary">November 6-10, 2024</span></li>
       </ul>
     </div>
