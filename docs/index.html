@@ -34,8 +34,13 @@
             class="overflow-hidden font-semibold flex flex-col md:p-0 md:py-3 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:-mr-3">
           <li>
             <a href="./"
-               class="block text-primary py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
+               class="block py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
                aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#about"
+               class="block py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
+               aria-current="page">About</a>
           </li>
           <li>
             <label for="dropdown-toggle"
@@ -78,6 +83,16 @@
               </ul>
             </div>
           </li>
+          <li>
+            <a href="#badge"
+               class="block py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
+               aria-current="page">Artifacts Badge</a>
+          </li>
+          <li>
+            <a href="#paper"
+               class="block py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
+               aria-current="page">Paper Guidelines</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -110,7 +125,7 @@
   <main>
     <!-- About the Challenge -->
     <section class="py-6 container">
-      <h2 class="text-2xl font-bold bg-title animation-delay-1000 mb-3">About the Challenge</h2>
+      <h2 id="about" class="text-2xl font-bold bg-title animation-delay-1000 scroll-m-20 mb-3">About the Challenge</h2>
       <p>Tabular data in the form of CSV files is the common input format in a data analytics pipeline. However, a
         lack of understanding of the semantic structure and meaning of the content may hinder the data analytics
         process.
@@ -179,8 +194,6 @@
         <li><strong>CEA Task</strong>: Matching a cell to a Wikidata entity</li>
         <li><strong>CPA Task</strong>: Assigning a KG property to the relationship between two columns</li>
         <li><strong>Table Topic Detection</strong>: Assigning a KG class to a table</li>
-        <li><strong>Column-Qualifier Annotation</strong>: Predicting both main properties and qualifiers for n-ary
-          relations that are expressed by three table columns</li>
       </ul>
 
       <!-- STI vs LLMs-->
@@ -320,7 +333,7 @@
     <!-- Artifacts Availability Badge -->
     <section class="py-6 flex justify-between container">
       <div class="max-w-prose">
-        <h2 class="text-2xl font-bold bg-title animation-delay-200 mb-3">Artifacts Availability Badge</h2>
+        <h2 id="badge" class="text-2xl font-bold bg-title animation-delay-200 scroll-m-20 mb-3">Artifacts Availability Badge</h2>
         <p>Also this year we use Artifacts Availability Badge which is applicable to the Accuracy Track as well as the
           Datasets Track.</p>
         <p>
@@ -346,7 +359,7 @@
 
     <!-- Paper Guidelines -->
     <section class="py-6 container">
-      <h2 class="text-2xl font-bold  animation-delay-150 mb-3">Paper Guidelines</h2>
+      <h2 id="paper" class="text-2xl font-bold  animation-delay-150 bg-title scroll-m-20 mb-3">Paper Guidelines</h2>
       <p>We invite participants to submit a paper, using <a href="https://easychair.org/my/conference?conf=semtab2024" target="_blank">easychair</a>.</p>
         System papers in the Accuracy, STI vs LLMs, Only Metadata to KG, and isGold? Tracks should be no more than 12 pages long (excluding references) and papers for
         the Datasets Track are limited to 6 pages.
@@ -615,7 +628,7 @@
         </a>
         <a href=""
            class="bg-card hover:bg-card-hover border border-l-0 w-full h-full flex justify-center items-center">
-          <img src="./imgs/iswc.webp"
+          <img src="./imgs/iswc.png"
                alt="ISWC 2023"
                class="w-full p-4 max-w-56">
         </a>
