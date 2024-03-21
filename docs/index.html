@@ -146,9 +146,22 @@
     <section class="py-6 container">
       <h2 class="text-2xl font-bold mb-3 bg-title animation-delay-75 scroll-m-20" id="tracks">Challenge Tracks</h2>
 
-      <div class="flex items-center gap-1">
+      <!-- Accuracy -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1">
         <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
         <h3 class="text-xl font-bold">Accuracy Track</h3>
+      </div>
+        <a href="./tracks/accuracy-track.html"
+         class="inline-flex items-center gap-1 text-primary">
+        <span>Track page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+             class="lucide lucide-move-right">
+          <path d="M18 8L22 12L18 16" />
+          <path d="M2 12H22" />
+        </svg>
+      </a>
       </div>
       <p>
         The evaluation of systems regarding accuracy is similar to prior versions of the SemTab.
@@ -169,8 +182,15 @@
         <li><strong>Column-Qualifier Annotation</strong>: Predicting both main properties and qualifiers for n-ary
           relations that are expressed by three table columns</li>
       </ul>
-      <a href="./tracks/accuracy-track.html"
-         class="inline-flex items-center gap-1 text-primary-foreground bg-primary border-0 py-2 px-4 pr-3 focus:outline-none hover:bg-primary/80 rounded-md">
+
+      <!-- STI vs LLMs-->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1">
+        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+        <h3 class="text-xl font-bold">STI vs LLMs Track</h3>
+      </div>
+        <a href="./tracks/sti-vs-llm-track.html"
+         class="inline-flex items-center gap-1 text-primary">
         <span>Track page</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
              stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
@@ -179,10 +199,6 @@
           <path d="M2 12H22" />
         </svg>
       </a>
-
-      <div class="flex items-center gap-1 mt-6">
-        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
-        <h3 class="text-xl font-bold title-font">STI vs LLMs Track</h3>
       </div>
       <p class="leading-relaxed text-base">This track involves the usage of LLMs to perform the CEA task using Wikidata.
         Participants will be asked to fine-tune an LLM using a dataset containing semantic annotations. Subsequently, an
@@ -198,8 +214,15 @@
       <ul class="list-disc ml-5 mb-4">
         <li><strong>CEA Task</strong>: Matching a cell to a Wikidata entity</li>
       </ul>
-      <a href="./tracks/sti-vs-llm-track.html"
-         class="inline-flex items-center gap-1 text-primary-foreground bg-primary border-0 py-2 px-4 pr-3 focus:outline-none hover:bg-primary/80 rounded-md">
+
+      <!-- Only Metadata to KG Track -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1">
+        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+        <h3 class="text-xl font-bold">Only Metadata to KG Track [TBU]</h3>
+      </div>
+        <a href="./tracks/metadata-to-kg-track.html"
+         class="inline-flex items-center gap-1 text-primary">
         <span>Track page</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
              stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
@@ -208,30 +231,30 @@
           <path d="M2 12H22" />
         </svg>
       </a>
-
-      <div class="flex items-center gap-1 mt-6">
-        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
-        <h3 class="text-xl font-bold title-font">Only Metadata to KG Track [TBU]</h3>
       </div>
       <p class="leading-relaxed text-base">This track asks participants to match table metadata only, e.g., column
         names, to knowledge graphs without any access to table data and content. This is a challenging task due to the
         limited available context that could be used by annotation systems to perform the semantic linking. LLMs are a
         promising way to achieve such task that could be utilized in different ways.
       </p>
-      <a href="./tracks/metadata-to-kg-track.html"
-         class="inline-flex items-center gap-1 text-primary-foreground bg-primary border-0 py-2 px-4 pr-3 focus:outline-none hover:bg-primary/80 rounded-md">
+
+
+      <!-- IsGold? Track [TBU] -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1">
+        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+        <h3 class="text-xl font-bold">IsGold? Track [TBU]</h3>
+      </div>
+        <a href="./tracks/is-gold-track.html"
+          class="inline-flex items-center gap-1 text-primary">
         <span>Track page</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-             class="lucide lucide-move-right">
+              stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-move-right">
           <path d="M18 8L22 12L18 16" />
           <path d="M2 12H22" />
         </svg>
       </a>
-
-      <div class="flex items-center gap-1 mt-6">
-        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
-        <h3 class="text-xl font-bold title-font">IsGold? Track [TBU]</h3>
       </div>
       <p class="leading-relaxed text-base">Since data quality matters this track opens a call for an open-ended
         question: how do we assess the quality of semantic table annotation datasets? Manual inspection could be a key
@@ -240,20 +263,23 @@
         we think is a promising solution is an automated way that runs specific tests on a given dataset. It then yields
         insights.
       </p>
-      <a href="./tracks/is-gold-track.html"
-         class="inline-flex items-center gap-1 text-primary-foreground bg-primary border-0 py-2 px-4 pr-3 focus:outline-none hover:bg-primary/80 rounded-md">
+
+      <!-- Datasets Track -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1">
+        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+        <h3 class="text-xl font-bold">Datasets Track</h3>
+      </div>
+        <a href="./tracks/datasets-track.html"
+          class="inline-flex items-center gap-1 text-primary">
         <span>Track page</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-             class="lucide lucide-move-right">
+              stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-move-right">
           <path d="M18 8L22 12L18 16" />
           <path d="M2 12H22" />
         </svg>
       </a>
-
-      <div class="flex items-center gap-1 mt-6">
-        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
-        <h3 class="text-xl font-bold">Datasets Track</h3>
       </div>
       <h4 class="text-lg font-semibold title-font mb-2">New dataset contributions</h4>
       <p class="leading-relaxed text-base">The data that table-to-Knowledge-Graph matching systems are trained and
@@ -290,16 +316,6 @@
         adopted approach yields a high quality dataset for downstream applications. Dataset and annotation
         revisions are expected to be made public with a permissive license for wider use in the community.
       </p>
-      <a href="./tracks/datasets-track.html"
-         class="inline-flex items-center gap-1 text-primary-foreground bg-primary border-0 py-2 px-4 pr-3 focus:outline-none hover:bg-primary/80 rounded-md">
-        <span>Track page</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-             class="lucide lucide-move-right">
-          <path d="M18 8L22 12L18 16" />
-          <path d="M2 12H22" />
-        </svg>
-      </a>
     </section>
 
     <!-- Artifacts Availability Badge -->
