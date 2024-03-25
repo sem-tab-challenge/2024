@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SemTab 2024 - Accuracy Track</title>
   <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
 </head>
 
 <body class="min-h-svh">
@@ -115,12 +117,129 @@
           column</li>
         <li><strong>CEA Task</strong>: Matching a cell to a Wikidata entity</li>
         <li><strong>CPA Task</strong>: Assigning a KG property to the relationship between two columns</li>
-        <li><strong>Table Topic Detection</strong>: Assigning a KG class to a table</li>
-        <li><strong>Column-Qualifier Annotation</strong>: Predicting both main properties and qualifiers for n-ary
-          relations that are expressed by three table columns</li>
+        <li><strong>TD Task</strong>: Assigning a KG class to a table</li>       
       </ul>
+	  
+	   <p>
+        Table Types:
+      </p>
+	   <ul class="list-disc ml-5 mb-4">
+        <li><strong>Horizontal Tables</strong>: A grid where each row represents one entity and each column shares the same semantic type.</li>
+        <li><strong>Entity Tables</strong>: A list of rows describe an entity/ a thing, where each row represents a property for that entity.</li>
+             
+      </ul>
+	  
+	<p>Horizontal Table Example:</p>
+	<img src="../imgs/horizontal_table.png" alt="Horizontal Table">
+	
+	<p>Entity Table Example: </p>
+	<img src="../imgs/entity_table.png" alt="Entity Table">
+	</Section>
+		
+	<section class="py-6 container">
+				
+		<h2 class="text-2xl font-bold animation-delay-1000 mb-3">Evaluation Criteria</h2>
+		<p>
+			Precision, Recall and F1 Score are calculated:
 
+			\[Precision = {{correct\_annotations \#} \over {submitted\_annotations \#}}\]
+
+			\[Recall = {{correct\_annotations \#} \over {ground\_truth\_annotations \#}}\]
+
+			\[F1 = {2 \times Precision \times Recall \over Precision + Recall}\]
+
+		</p>
+
+		<p>Notes:</p>
+
+		<ul class="list-disc ml-5 mb-4">
+			<li>
+				# denotes the number.
+			</li>
+			<li>
+				\(F1\) is used as the primary score, and \(Precision\) is used as the secondary
+				score.
+			</li>
+			<li>
+				One target cell, one ground truth annotation, i.e., # ground truth annotations =
+				# target
+				cells. The ground truth annotation has already covered all equivalent entities
+				(e.g., wiki
+				page redirected entities); the ground truth is hit if one of its equivalent
+				entities is hit.
+			</li>
+		</ul>
+						
+	</section>
+	
+	<section class="py-6 container">
+	
+	<h2 class="text-2xl font-bold animation-delay-1000 mb-3 ">Round 1</h2>	
+	
+	<h5 class="text-2l font-bold animation-delay-1000 mb-3">Datasets</h5>
+	
+	<ul class="list-disc ml-5 mb-4">
+		<li><strong>tBiodiv</strong>: <a href="https://doi.org/10.5281/zenodo.10283015"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10283015.svg" alt="DOI"></a></li>
+		<li><strong>tBiomed</strong>: <a href="https://doi.org/10.5281/zenodo.10283103"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10283103.svg" alt="DOI"></a></li>
+	</ul>
+	
+	<p><strong>Target Knowledge Graph</strong>: Wikidata. For offline use <a href="https://dumps.wikimedia.org/wikidatawiki/20240220/">Feb 2024</a></p>
+	
+	<h5 class="text-2l font-bold animation-delay-1000 mb-3">Datasets' Structure</h5>
+	<p>Both <strong>tBiodiv</strong> and <strong>tBiomed</strong> consist of two data folds (validation and test) each of which has two table types <strong>entity</strong> and <strong>horizontal</strong> tables with the following supported tasks:</p>
+	<p><strong>Supported Tasks</strong></p>
+		<ul class="list-disc ml-5 mb-4">
+			<li><strong>Entity tables (tBiomed & tBiodiv)</strong>: CEA, RA, TD</li>
+			<li><strong>Horizontal tables (tBiomed & tBiodiv)</strong>: CEA, CTA, CPA, RA, TD</li>
+		</ul>
+	</p>
+	
+	<p><strong>Targets Format</strong>
+		<ul class="list-disc ml-5 mb-4">
+			<li><strong>CEA</strong>: filename, column id, row id</li>
+			<li><strong>CTA</strong>: file name, column id</li>
+			<li><strong>CPA</strong>: filename, subject column id, object column id </li>
+			<li><strong>RA</strong>: filename, row id </li>
+			<li><strong>TD</strong>: filename</li>
+			<li>Notes:
+				<ul>
+					<li> - filename is without extention.</li>
+					<li> - column, row ids are zero based.</li>					
+					<li> - targets indicates what to solve in each task.</li>		
+					<li> - ground truth (gt) indicates the solution of each target.</li>		
+					<li> - ground truth (gt) format is the same as targets with the QID of corresponding Wikidata entity/class/property.</li>		
+				</ul>
+			</li>
+		</ul>	
+	</p>
+	
+	<h5 class="text-2l font-bold animation-delay-1000 mb-3">Participate!</h5>		
+		<p><strong>Self Evaluation</strong>: You can evaluate your system on your own. <a href="#">Evaluator Code Link</a></p>
+		<p><strong>Submission</strong>: Are you ready? Then, submit the results of the <strong>test</strong> set <a href="#">Submission URL</a></p>
+	</section>
+	
   </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <aside
          id="date-card-container"
