@@ -174,24 +174,30 @@
 	
 	<section class="py-6 container">
 	
-	<h2 class="text-2xl font-bold animation-delay-1000 mb-3 ">Round 1</h2>	
-	
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-1">
+        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+        <h2 class="text-xl font-bold">Round 1</h2>
+      </div>
+    </div>
+    <p></p>
+
 	<h5 class="text-2l font-bold animation-delay-1000 mb-3">Datasets</h5>
 	<ul class="list-disc ml-5 mb-4">
 		<li><strong>tBiodiv</strong>: <a href="https://doi.org/10.5281/zenodo.10283015"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10283015.svg" alt="DOI"></a></li>
 		<li><strong>tBiomed</strong>: <a href="https://doi.org/10.5281/zenodo.10283103"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10283103.svg" alt="DOI"></a></li>
 	</ul>
 	
-	<p><strong>Target Knowledge Graph</strong>: Wikidata. For offline use <a href="https://dumps.wikimedia.org/wikidatawiki/20240220/">Feb 2024</a>.</p>
+	<p><strong>Target Knowledge Graph</strong>: Wikidata. For offline, use <a href="https://dumps.wikimedia.org/wikidatawiki/20240220/">Feb 2024</a>.</p>
 	
 	<h5 class="text-2l font-bold animation-delay-1000 mb-3">Datasets' Structure</h5>
 	<p>Both <strong>tBiodiv</strong> and <strong>tBiomed</strong> consist of two data folds (validation and test) each of which has two table types <strong>entity</strong> and <strong>horizontal</strong> tables with the following supported tasks:</p>
-	<p><strong>Supported Tasks</strong></p>
+	
+  <h5 class="text-2l font-bold animation-delay-1000 mb-3">Supported Task</h5>
 		<ul class="list-disc ml-5 mb-4">
 			<li><strong>Entity tables (tBiomed & tBiodiv)</strong>: CEA, RA, TD</li>
 			<li><strong>Horizontal tables (tBiomed & tBiodiv)</strong>: CEA, CTA, CPA, RA, TD</li>
 		</ul>
-	</p>
 	
   <h5 class="text-2l font-bold animation-delay-1000 mb-3">Targets Format</h5>
 		<ul class="list-disc ml-5 mb-4">
