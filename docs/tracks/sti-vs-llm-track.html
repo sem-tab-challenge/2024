@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SemTab 2024 - STI vs LLMs Track</title>
   <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
 </head>
 
 <body class="min-h-svh">
@@ -102,13 +103,10 @@
     <!-- Tracks -->
     <section class="py-6 container">
       <h2 class="text-2xl font-bold animation-delay-1000 mb-3">Description</h2>
-      <p class="leading-relaxed text-base">This track involves the usage of LLMs to perform the CEA task using Wikidata.
-        Participants will be asked to fine-tune an LLM using a dataset containing semantic annotations. Subsequently, an
-        unannotated validation set will be provided to measure the quality of the approaches (with the usual metrics
-        used in the previous edition of this challenge). This task considers several challenges, including identifying a
-        way to inject the factual knowledge of a KG within an LLM, determining methods to manage Wikidata Qids,
-        enriching the training dataset to increase the disambiguation capabilities of the LLM, and finally, building
-        effective prompts to carry out fine-tuning.
+      <p class="leading-relaxed text-base">This track involves using ONLY LLMs to perform the CEA task using Wikidata.
+        Participants will be tasked with fine-tuning or simply prompting an  LLM using a dataset containing semantic annotations. 
+        This task entails various challenges, including identifying methods to inject factual knowledge from a knowledge graph (KG) within an LLM, devising strategies to manage Wikidata Qids, enriching the training dataset to enhance the LLM's disambiguation capabilities, limiting hallucination problems, and constructing effective prompts for fine-tuning/annotation purposes. 
+        The objective is to harness LLMs' extensive capabilities to generate accurate annotations for the CEA task, thereby advancing their utility in semantic enrichment endeavours. Additionally, participants must submit their annotations for evaluation on the test set, ensuring the effectiveness of their approaches in real-world scenarios.
       </p>
       <p>
         Matching Tasks:
@@ -116,7 +114,73 @@
       <ul class="list-disc ml-5 mb-4">
         <li><strong>CEA Task</strong>: Matching a cell to a Wikidata entity</li>
       </ul>
+    </section>
 
+      <section class="py-6 container">
+      <h2 class="text-2xl font-bold animation-delay-1000 mb-3">Task overview</h2>
+      <p class="leading-relaxed text-base">
+        Participants are provided with tabular data containing columns with entity mentions. These entity mentions have to be annotated with corresponding entities from Wikidata. The annotation should contain the URI of the Wikidata entity (the prefix http://www.wikidata.org/entity/ is not mandatory). The prompt used for performing the CEA must also be sent.
+      </p>
+      </section>
+      <section class="py-6 container">
+				
+        <h2 class="text-2xl font-bold animation-delay-1000 mb-3">Evaluation Criteria</h2>
+        <p>
+          Precision, Recall and F1 Score are calculated:
+    
+          \[Precision = {{correct\_annotations \#} \over {submitted\_annotations \#}}\]
+    
+          \[Recall = {{correct\_annotations \#} \over {ground\_truth\_annotations \#}}\]
+    
+          \[F1 = {2 \times Precision \times Recall \over Precision + Recall}\]
+    
+        </p>
+    
+        <p>Notes:</p>
+    
+        <ul class="list-disc ml-5 mb-4">
+          <li>
+            # denotes the number.
+          </li>
+          <li>
+            \(F1\) is used as the primary score, and \(Precision\) is used as the secondary
+            score.
+          </li>
+          <li>
+            One target cell, one ground truth annotation, i.e., # ground truth annotations =
+            # target
+            cells. The ground truth annotation has already covered all equivalent entities
+            (e.g., wiki
+            page redirected entities); the ground truth is hit if one of its equivalent
+            entities is hit.
+          </li>
+        </ul>
+                
+      </section>
+
+      <section class="py-6 container">
+	
+        <h2 class="text-2xl font-bold animation-delay-1000 mb-3 ">Round 1</h2>	
+        
+        <h5 class="text-2l font-bold animation-delay-1000 mb-3">Datasets</h5>
+        <p><strong>Target Knowledge Graph</strong>: Wikidata. For offline use <a href="https://dumps.wikimedia.org/wikidatawiki/20240220/">Feb 2024</a>.</p>
+        
+        <h5 class="text-2l font-bold animation-delay-1000 mb-3">Datasets' Structure</h5>
+        <p>The dataset is divided into training and validation sets. The dataset includes general-purpose tables and intentionally misspelled entities to evaluate the model's robustness. Participants must annotate the entity mentions in the validation set and submit their annotations (following a target file).</p>
+        
+        <h5 class="text-2l font-bold animation-delay-1000 mb-3">Supported Task</h5>
+        <ul class="list-disc ml-5 mb-4">
+          <li>CEA</li>
+        </ul>
+
+        <h5 class="text-2l font-bold animation-delay-1000 mb-3">Targets Format</h5>
+        <ul class="list-disc ml-5 mb-4">
+          <li>filename, column id, row id</li>
+        </ul>
+
+        <h5 class="text-2l font-bold animation-delay-1000 mb-3">Participate!</h5>		
+        <p><strong>Submission</strong>: Are you ready? Then, submit the results of the <strong>test</strong> set <a href="#">Submission URL</a>.</p>
+      </section>
   </main>
 
   <aside
