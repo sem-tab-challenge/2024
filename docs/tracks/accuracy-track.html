@@ -14,69 +14,62 @@
   <nav class="bg-grid bg-bottom z-20 sticky top-0 transition-all duration-300" id="nav-bar">
     <div class="container flex flex-wrap items-center justify-between py-1 relative">
       <a href="./"
-         class="items-center space-x-3 rtl:space-x-reverse pointer-events-none opacity-1 transition-opacity duration-300"
-         id="nav-brand">
+        class="items-center space-x-3 rtl:space-x-reverse pointer-events-none opacity-1 transition-opacity duration-300"
+        id="nav-brand">
         <span class="self-center text-2xl font-bold whitespace-nowrap bg-title animation-delay-200">SemTab 2024</span>
       </a>
 
-      <button data-collapse-toggle="navbar-default" type="button"
-              id="navbar-toggle"
-              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-              aria-controls="navbar-default" aria-expanded="false">
+      <button data-collapse-toggle="navbar-default" type="button" id="navbar-toggle"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15" />
+            d="M1 1h15M1 7h15M1 13h15" />
         </svg>
       </button>
 
       <div class="grid grid-rows-0fr transition-grid-template-rows w-full md:block md:ml-auto md:w-auto p-4 md:p-0"
-           id="navbar-content">
+        id="navbar-content">
         <ul
-            class="overflow-hidden font-semibold flex flex-col md:p-0 md:py-3 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:-mr-3">
+          class="overflow-hidden font-semibold flex flex-col md:p-0 md:py-3 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:-mr-3">
           <li>
-            <a href="../index.html"
-               class="block py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
-               aria-current="page">Home</a>
+            <a href="../index.html" class="block py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
+              aria-current="page">Home</a>
           </li>
           <li>
             <label for="dropdown-toggle"
-                   class="py-1.5 px-3 text-primary rounded-lg hover:bg-primary hover:text-primary-foreground flex items-center cursor-pointer has-[:checked]:bg-primary has-[:checked]:text-primary-foreground">
+              class="py-1.5 px-3 text-primary rounded-lg hover:bg-primary hover:text-primary-foreground flex items-center cursor-pointer has-[:checked]:bg-primary has-[:checked]:text-primary-foreground">
               Tracks
               <input type="checkbox" class="hidden peer" id="dropdown-toggle" name="dropdown-toggle" />
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                   fill="none" stroke="currentColor" stroke-width="2"
-                   stroke-linecap="round" stroke-linejoin="round"
-                   class="lucide lucide-chevron-up h-6 w-6 peer-checked:rotate-0 rotate-180 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chevron-up h-6 w-6 peer-checked:rotate-0 rotate-180 transition-transform duration-300">
                 <path d="m18 15-6-6-6 6" />
               </svg>
             </label>
 
             <!-- Dropdown menu -->
             <div id="dropdown-content"
-                 class="z-10 absolute hidden top-16 right-0 bg-card divide-y divide-slate-200 rounded-lg shadow w-44">
+              class="z-10 absolute hidden top-16 right-0 bg-card divide-y divide-slate-200 rounded-lg shadow w-44">
               <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButton">
                 <li>
                   <a href="./accuracy-track.html"
-                     class="block px-4 py-2 hover:bg-card-hover hover:text-foreground bg-primary text-primary-foreground">Accuracy
+                    class="block px-4 py-2 hover:bg-card-hover hover:text-foreground bg-primary text-primary-foreground">Accuracy
                   </a>
                 </li>
                 <li>
-                  <a href="./sti-vs-llm-track.html"
-                     class="block px-4 py-2 hover:bg-card-hover">STI vs LLMs</a>
+                  <a href="./sti-vs-llm-track.html" class="block px-4 py-2 hover:bg-card-hover">STI vs LLMs</a>
                 </li>
                 <li>
-                  <a href="./metadata-to-kg-track.html"
-                     class="block px-4 py-2 hover:bg-card-hover">Only Metadata to KG
+                  <a href="./metadata-to-kg-track.html" class="block px-4 py-2 hover:bg-card-hover">Only Metadata to KG
                   </a>
                 </li>
                 <li>
-                  <a href="./is-gold-track.html"
-                     class="block px-4 py-2 hover:bg-card-hover">IsGold?</a>
+                  <a href="./is-gold-track.html" class="block px-4 py-2 hover:bg-card-hover">IsGold?</a>
                 </li>
                 <li>
-                  <a href="./datasets-track.html"
-                     class="block px-4 py-2 hover:bg-card-hover">Datasets</a>
+                  <a href="./datasets-track.html" class="block px-4 py-2 hover:bg-card-hover">Datasets</a>
                 </li>
               </ul>
             </div>
@@ -90,9 +83,8 @@
   <section class="py-6 bg-grid bg-top">
     <div class="container flex md:flex-row flex-col items-center">
       <div
-           class="lg:flex-grow md:w-3/4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center md:min-w-prose">
-        <h1
-            class="sm:text-6xl text-3xl mb-4 font-bold bg-title animation-delay-700">
+        class="lg:flex-grow md:w-3/4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center md:min-w-prose">
+        <h1 class="sm:text-6xl text-3xl mb-4 font-bold bg-title animation-delay-700">
           Accuracy Track</h1>
       </div>
     </div>
@@ -117,111 +109,129 @@
           column</li>
         <li><strong>CEA Task</strong>: Matching a cell to a Wikidata entity</li>
         <li><strong>CPA Task</strong>: Assigning a KG property to the relationship between two columns</li>
-        <li><strong>TD Task</strong>: Assigning a KG class to a table</li>       
+        <li><strong>TD Task</strong>: Assigning a KG class to a table</li>
       </ul>
-	  
-	   <p>
+
+      <p>
         Table Types:
       </p>
-	   <ul class="list-disc ml-5 mb-4">
-        <li><strong>Horizontal Tables</strong>: A grid where each row represents one entity and each column shares the same semantic type.</li>
-        <li><strong>Entity Tables</strong>: A list of rows describe an entity/ a thing, where each row represents a property for that entity.</li>
-             
+      <ul class="list-disc ml-5 mb-4">
+        <li><strong>Horizontal Tables</strong>: A grid where each row represents one entity and each column shares the
+          same semantic type.</li>
+        <li><strong>Entity Tables</strong>: A list of rows describe an entity/ a thing, where each row represents a
+          property for that entity.</li>
+
       </ul>
-	  
-	<p>Horizontal Table Example:</p>
-	<img src="../imgs/horizontal_table.png" alt="Horizontal Table">
-	
-	<p>Entity Table Example: </p>
-	<img src="../imgs/entity_table.png" alt="Entity Table">
-	</Section>
-		
-	<section class="py-6 container">
-				
-		<h2 class="text-2xl font-bold animation-delay-1000 mb-3">Evaluation Criteria</h2>
-		<p>
-			Precision, Recall and F1 Score are calculated:
 
-			\[Precision = {{correct\_annotations \#} \over {submitted\_annotations \#}}\]
+      <p>Horizontal Table Example:</p>
+      <img src="../imgs/horizontal_table.png" alt="Horizontal Table">
 
-			\[Recall = {{correct\_annotations \#} \over {ground\_truth\_annotations \#}}\]
+      <p>Entity Table Example: </p>
+      <img src="../imgs/entity_table.png" alt="Entity Table">
+    </Section>
 
-			\[F1 = {2 \times Precision \times Recall \over Precision + Recall}\]
+    <section class="py-6 container">
 
-		</p>
+      <h2 class="text-2xl font-bold animation-delay-1000 mb-3">Evaluation Criteria</h2>
+      <p>
+        Precision, Recall and F1 Score are calculated:
 
-		<p>Notes:</p>
+        \[Precision = {{correct\_annotations \#} \over {submitted\_annotations \#}}\]
 
-		<ul class="list-disc ml-5 mb-4">
-			<li>
-				# denotes the number.
-			</li>
-			<li>
-				\(F1\) is used as the primary score, and \(Precision\) is used as the secondary
-				score.
-			</li>
-			<li>
-				One target cell, one ground truth annotation, i.e., # ground truth annotations =
-				# target
-				cells. The ground truth annotation has already covered all equivalent entities
-				(e.g., wiki
-				page redirected entities); the ground truth is hit if one of its equivalent
-				entities is hit.
-			</li>
-		</ul>
-						
-	</section>
-	
-	<section class="py-6 container">
-	
-    <div class="flex items-center justify-between">
-      <div class="flex items-center gap-1">
-        <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
-        <h2 class="text-xl font-bold">Round 1</h2>
+        \[Recall = {{correct\_annotations \#} \over {ground\_truth\_annotations \#}}\]
+
+        \[F1 = {2 \times Precision \times Recall \over Precision + Recall}\]
+
+      </p>
+
+      <p>Notes:</p>
+
+      <ul class="list-disc ml-5 mb-4">
+        <li>
+          # denotes the number.
+        </li>
+        <li>
+          \(F1\) is used as the primary score, and \(Precision\) is used as the secondary
+          score.
+        </li>
+        <li>
+          One target cell, one ground truth annotation, i.e., # ground truth annotations =
+          # target
+          cells. The ground truth annotation has already covered all equivalent entities
+          (e.g., wiki
+          page redirected entities); the ground truth is hit if one of its equivalent
+          entities is hit.
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="py-6 container">
+
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1">
+          <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+          <h2 class="text-xl font-bold">Round 1</h2>
+        </div>
       </div>
-    </div>
-    <p></p>
+      <p></p>
 
-	<h5 class="text-2l font-bold animation-delay-1000 mb-3">Datasets</h5>
-	<ul class="list-disc ml-5 mb-4">
-		<li><strong>tBiodiv</strong>: <a href="https://doi.org/10.5281/zenodo.10283015"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10283015.svg" alt="DOI"></a></li>
-		<li><strong>tBiomed</strong>: <a href="https://doi.org/10.5281/zenodo.10283103"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10283103.svg" alt="DOI"></a></li>
-	</ul>
-	
-	<p><strong>Target Knowledge Graph</strong>: Wikidata. For offline, use <a href="https://dumps.wikimedia.org/wikidatawiki/20240220/">Feb 2024</a>.</p>
-	
-	<h5 class="text-2l font-bold animation-delay-1000 mb-3">Datasets' Structure</h5>
-	<p>Both <strong>tBiodiv</strong> and <strong>tBiomed</strong> consist of two data folds (validation and test) each of which has two table types <strong>entity</strong> and <strong>horizontal</strong> tables with the following supported tasks:</p>
-	
-  <h5 class="text-2l font-bold animation-delay-1000 mb-3">Supported Task</h5>
-		<ul class="list-disc ml-5 mb-4">
-			<li><strong>Entity tables (tBiomed & tBiodiv)</strong>: CEA, RA, TD</li>
-			<li><strong>Horizontal tables (tBiomed & tBiodiv)</strong>: CEA, CTA, CPA, RA, TD</li>
-		</ul>
-	
-  <h5 class="text-2l font-bold animation-delay-1000 mb-3">Targets Format</h5>
-		<ul class="list-disc ml-5 mb-4">
-			<li><strong>CEA</strong>: filename, column id, row id</li>
-			<li><strong>CTA</strong>: file name, column id</li>
-			<li><strong>CPA</strong>: filename, subject column id, object column id </li>
-			<li><strong>RA</strong>: filename, row id </li>
-			<li><strong>TD</strong>: filename</li>
-			<li>Notes:
-				<ul>
-					<li> - filename is without extention.</li>
-					<li> - column, row ids are zero based.</li>					
-					<li> - targets indicates what to solve in each task.</li>		
-					<li> - ground truth (gt) indicates the solution of each target.</li>		
-					<li> - ground truth (gt) format is the same as targets with the QID of corresponding Wikidata entity/class/property.</li>		
-				</ul>
-			</li>
-		</ul>
-	
-    <h5 class="text-2l font-bold animation-delay-1000 mb-3">Participate!</h5>	
-		<p><strong>Self Evaluation</strong>: You can evaluate your system on your own. <a href="#">Evaluator Code Link</a>.</p>
-		<p><strong>Submission</strong>: Are you ready? Then, submit the results of the <strong>test</strong> set <a href="#">Submission URL</a>.</p>
-	</section>
-	
+      <h5 class="text-2l font-bold animation-delay-1000 mb-3">Datasets</h5>
+      <ul class="list-disc ml-5 mb-4">
+        <li><strong>WikidataTables2024</strong>: Link will be posted soon.</li>
+        <li><strong>tBiodiv</strong>: <a href="https://doi.org/10.5281/zenodo.10283015"><img
+              src="https://zenodo.org/badge/DOI/10.5281/zenodo.10283015.svg" alt="DOI"></a></li>
+        <li><strong>tBiomed</strong>: <a href="https://doi.org/10.5281/zenodo.10283103"><img
+              src="https://zenodo.org/badge/DOI/10.5281/zenodo.10283103.svg" alt="DOI"></a></li>
+      </ul>
+
+      <p><strong>Target Knowledge Graph</strong>: Wikidata. For offline, use <a
+          href="https://dumps.wikimedia.org/wikidatawiki/entities/20240320/">March 20 2024</a> dump. Reach out to the
+        organizers if you need assistance in setting up a triplestore.</p>
+
+      <h5 class="text-2l font-bold animation-delay-1000 mb-3">Datasets' Structure</h5>
+      <p>All datasets consist of two data folds (training and validation). WikidataTables are all relational
+        (horizontal)
+        tables.
+        <strong>tBiodiv</strong> and <strong>tBiomed</strong> have two table types <strong>entity</strong> (vertical)
+        and
+        <strong>relational</strong> (horizontal) tables with the following
+        supported tasks:
+      </p>
+
+      <h5 class="text-2l font-bold animation-delay-1000 mb-3">Supported Task</h5>
+      <ul class="list-disc ml-5 mb-4">
+        <li><strong>WikidataTables</strong>: CEA, CTA, CPA</li>
+        <li><strong>Relational tables of tBiomed & tBiodiv</strong>: CEA, CTA, CPA, RA, TD</li>
+        <li><strong>Entity tables of tBiomed & tBiodiv</strong>: CEA, RA, TD</li>
+      </ul>
+
+      <h5 class="text-2l font-bold animation-delay-1000 mb-3">Targets Format</h5>
+      <ul class="list-disc ml-5 mb-4">
+        <li><strong>CEA</strong>: table name, column id, row id</li>
+        <li><strong>CTA</strong>: table name, column id</li>
+        <li><strong>CPA</strong>: table name, subject column id, object column id </li>
+        <li><strong>RA</strong>: table name, row id </li>
+        <li><strong>TD</strong>: table name</li>
+        <li>Notes:
+          <ul>
+            <li> - table name is filename without the extention.</li>
+            <li> - column, row ids are zero based.</li>
+            <li> - targets indicates what to solve in each task.</li>
+            <li> - ground truth (gt) indicates the solution of each target.</li>
+            <li> - ground truth (gt) format is the same as targets with the QID of corresponding Wikidata
+              entity/class/property.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h5 class="text-2l font-bold animation-delay-1000 mb-3">Participate!</h5>
+      <p><strong>Self Evaluation</strong>: You can evaluate your system on your own. <a href="#">Evaluator Code
+          Link</a> (TBD).</p>
+      <p><strong>Submission</strong>: Are you ready? Then, submit the results of the <strong>test</strong> set <a
+          href="#">Submission URL</a> (TBD).</p>
+    </section>
+
   </main>
 
 
@@ -245,9 +255,8 @@
 
 
 
-  <aside
-         id="date-card-container"
-         class="sticky bottom-0 sm:bottom-6 w-full sm:left-auto sm:right-6 sm:max-w-fit sm:ml-auto p-4 md:p-8 rounded-t-lg sm:rounded-lg bg-card border shadow-lg text-sm md:text-base transition-spacing duration-300">
+  <aside id="date-card-container"
+    class="sticky bottom-0 sm:bottom-6 w-full sm:left-auto sm:right-6 sm:max-w-fit sm:ml-auto p-4 md:p-8 rounded-t-lg sm:rounded-lg bg-card border shadow-lg text-sm md:text-base transition-spacing duration-300">
 
 
     <label for="checkbox-date-card" class="cursor-pointer flex items-center justify-between">
@@ -256,11 +265,10 @@
         <span class="flex w-3 h-3 me-3 bg-red-500 rounded-full animate-pulse"></span>
       </div>
       <input checked="false" data-collapse-toggle="false" type="checkbox" id="checkbox-date-card"
-             name="checkbox-date-card"
-             class="hidden peer" />
+        name="checkbox-date-card" class="hidden peer" />
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-           stroke-linecap="round" stroke-linejoin="round"
-           class="lucide lucide-chevron-up h-6 w-6 peer-checked:rotate-180 rotate-0 transition-transform duration-300">
+        stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-chevron-up h-6 w-6 peer-checked:rotate-180 rotate-0 transition-transform duration-300">
         <path d="m18 15-6-6-6 6" />
       </svg>
     </label>
@@ -270,9 +278,9 @@
       <ul class="list-disc pl-5 overflow-hidden">
         <li>First Call for Challenge Participants: <span class="font-bold text-primary">March 30, 2024</span></li>
         <li>Round 1: <span class="font-bold text-primary">April 15, 2024</span> to <span
-                class="font-bold text-primary">May 15, 2024</span></li>
+            class="font-bold text-primary">May 15, 2024</span></li>
         <li>Round 2: <span class="font-bold text-primary">May 15, 2024</span> to <span
-                class="font-bold text-primary">June 15, 2024</span></li>
+            class="font-bold text-primary">June 15, 2024</span></li>
         <li>Paper Submission Deadline (Systems and Datasets): <span class="font-bold text-primary">June 28, 2024</span>
         </li>
         <li>System Results: <span class="font-bold text-primary">July 19, 2024</span></li>
