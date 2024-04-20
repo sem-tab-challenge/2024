@@ -9,6 +9,7 @@ Sample data:
 - [Sample Metadata Ontology in OWL](r1_sample_metadata.owl)
 - [Sample Ground Truth](r1_sample_GT.csv)
 - [Sample Output of Mapping](r1_sample_output.jsonl)
+  - Note: The mappings array will be sorted in descending order by score.
 
 Test data (what we expect you to map to the glossary):
 - [Metadata File in JSONL](r1_test_metadata.jsonl)

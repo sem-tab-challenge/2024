@@ -115,7 +115,13 @@
       <p>Check out the <a
           href="https://github.com/sem-tab-challenge/2024/tree/main/data/metadata2kg/round1/README.md">README file</a>
         for input/output format, sample
-        input/output, and an evaluation script.</p>
+        input/output, and an evaluation script. Note that the output of the mapping is a JSONL file with each line
+        containing a mapping of a column ID to an array of class IDs and scores, which will be sorted in descending
+        order by score for evaluation. Round 1 data has one mapping for each column, which is the most specific class
+        that the column maps to (e.g., if the column is about movie directors, the correct mapping should be
+        https://dbpedia.org/ontology/MovieDirector and not https://dbpedia.org/ontology/Person). In Round 2, each column
+        may map to more than one class, or no class at all. The provided evaluation script measures Hit@1 and Hit@5.
+        Other measures may be added for final evaluation and in Round 2.</p>
   </main>
 
   <main>
