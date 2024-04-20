@@ -199,6 +199,11 @@
     <rdfs:comment>ALT (m) column in Table Mountain. Other Columns: PEAK, RANKING, MAP, GUIDE, GRID REF, ALT (ft), ALT (m)</rdfs:comment>
     <rdfs:subClassOf rdf:resource="1146722_1_7558140036342906956"/>
   </owl:Class>
+  <owl:Class rdf:about="38428277_0_1311643810102462607_Director(s)">
+    <rdfs:label>Director(s)</rdfs:label>
+    <rdfs:comment>Director(s) column in Table Film. Other Columns: Fans' Rank, Title, Year, Director(s), Overall Rank</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="38428277_0_1311643810102462607"/>
+  </owl:Class>
   <owl:Class rdf:about="73242003_5_4847571983313033360_Publisher">
     <rdfs:label>Publisher</rdfs:label>
     <rdfs:comment>Publisher column in Table VideoGame. Other Columns: Rank, Title, Category, Publisher</rdfs:comment>
@@ -369,11 +374,6 @@
     <rdfs:comment>Max.-Tiefe-(m) column in Table Lake. Other Columns: Rang, Name, Staat(en), Fläche-(km2), Länge-(km), Max.-Tiefe-(m), Volumen-(km?)</rdfs:comment>
     <rdfs:subClassOf rdf:resource="8468806_0_4382447409703007384"/>
   </owl:Class>
-  <owl:Class rdf:about="38428277_0_1311643810102462607_Director(s)">
-    <rdfs:label>Director(s)</rdfs:label>
-    <rdfs:comment>Director(s) column in Table Film. Other Columns: Fans' Rank, Title, Year, Director(s), Overall Rank</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="38428277_0_1311643810102462607"/>
-  </owl:Class>
   <owl:Class rdf:about="52299421_0_4473286348258170200_GDP">
     <rdfs:label>GDP</rdfs:label>
     <rdfs:comment>GDP column in Table Country. Other Columns: 1998 Data Country, GDP Per Capita, GDP Growth Rate, GDP, Inflation, Population, Popul. Growth, Infant Mortality</rdfs:comment>
@@ -439,6 +439,11 @@
     <rdfs:comment>Length column in Table Film. Other Columns: Title, Year, Media Type, Director, Writer, Length, Matting</rdfs:comment>
     <rdfs:subClassOf rdf:resource="50245608_0_871275842592178099"/>
   </owl:Class>
+  <owl:Class rdf:about="46671561_0_6122315295162029872_Release">
+    <rdfs:label>Release</rdfs:label>
+    <rdfs:comment>Release column in Table VideoGame. Other Columns: Game, Genre, Platform, Release</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="46671561_0_6122315295162029872"/>
+  </owl:Class>
   <owl:Class rdf:about="22864497_0_8632623712684511496_Cost">
     <rdfs:label>Cost</rdfs:label>
     <rdfs:comment>Cost column in Table VideoGame. Other Columns: Title, Publisher, North America, Europe, Japan, Cost, Size</rdfs:comment>
@@ -448,11 +453,6 @@
     <rdfs:label>System</rdfs:label>
     <rdfs:comment>System column in Table VideoGame. Other Columns: Cover, Status, Name, Genre, FSK, Kommentar, Verliehen?, System</rdfs:comment>
     <rdfs:subClassOf rdf:resource="48944826_0_2321751364268052533"/>
-  </owl:Class>
-  <owl:Class rdf:about="46671561_0_6122315295162029872_Release">
-    <rdfs:label>Release</rdfs:label>
-    <rdfs:comment>Release column in Table VideoGame. Other Columns: Game, Genre, Platform, Release</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="46671561_0_6122315295162029872"/>
   </owl:Class>
   <owl:Class rdf:about="55961337_0_6548713781034932742_Numericcode">
     <rdfs:label>Numeric code</rdfs:label>
@@ -710,312 +710,4 @@
     <rdfs:subClassOf rdf:resource="89511064_0_2199624509082573904"/>
   </owl:Class>
   <owl:Ontology rdf:about="r1_test_metadata.owl"/>
-  <owl:Class rdf:about="68779923_5_2067037721454758189">
-    <rdfs:label>Country</rdfs:label>
-    <rdfs:comment>Country Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="29414811_2_4773219892816395776">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="73242003_5_4847571983313033360">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="36102169_0_7739454799295072814">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="55961337_0_6548713781034932742">
-    <rdfs:label>Currency</rdfs:label>
-    <rdfs:comment>Currency Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="38428277_0_1311643810102462607">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="89511064_0_2199624509082573904">
-    <rdfs:label>Country</rdfs:label>
-    <rdfs:comment>Country Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="3887681_0_7938589465814037992">
-    <rdfs:label>Lake</rdfs:label>
-    <rdfs:comment>Lake Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="90593344_0_8311455501234425088">
-    <rdfs:label>Mountain</rdfs:label>
-    <rdfs:comment>Mountain Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="53822652_0_5767892317858575530">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="68779923_4_1832350971585698643">
-    <rdfs:label>Country</rdfs:label>
-    <rdfs:comment>Country Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="3962429_0_3452614694863053249">
-    <rdfs:label>Hotel</rdfs:label>
-    <rdfs:comment>Hotel Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="18422942_0_3659164506677528063">
-    <rdfs:label>Work</rdfs:label>
-    <rdfs:comment>Work Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="30166286_0_1837439231599898748">
-    <rdfs:label>Scientist</rdfs:label>
-    <rdfs:comment>Scientist Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="12125836_0_1134348206297032434">
-    <rdfs:label>RadioStation</rdfs:label>
-    <rdfs:comment>RadioStation Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="11599512_1_280388135214354946">
-    <rdfs:label>Country</rdfs:label>
-    <rdfs:comment>Country Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="68442591_0_8506821153001360777">
-    <rdfs:label>Hospital</rdfs:label>
-    <rdfs:comment>Hospital Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="57938705_0_8737506792349461963">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="98929678_0_3700213490979945526">
-    <rdfs:label>Lake</rdfs:label>
-    <rdfs:comment>Lake Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="50245608_0_871275842592178099">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="86297395_0_6919201319699354263">
-    <rdfs:label>Country</rdfs:label>
-    <rdfs:comment>Country Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="91959037_0_7907661684242014480">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="11833461_1_3811022039809817402">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="26310680_0_5150772059999313798">
-    <rdfs:label>Currency</rdfs:label>
-    <rdfs:comment>Currency Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="43237185_1_3636357855502246981">
-    <rdfs:label>Scientist</rdfs:label>
-    <rdfs:comment>Scientist Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="41336118_0_4331895026409635103">
-    <rdfs:label>Company</rdfs:label>
-    <rdfs:comment>Company Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="9686394_0_5980699488362107028">
-    <rdfs:label>Airport</rdfs:label>
-    <rdfs:comment>Airport Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="49772588_0_6549847739640234347">
-    <rdfs:label>Country</rdfs:label>
-    <rdfs:comment>Country Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="46671561_0_6122315295162029872">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="4501311_8_8306082458935575308">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="44206774_0_3810538885942465703">
-    <rdfs:label>GolfPlayer</rdfs:label>
-    <rdfs:comment>GolfPlayer Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="93702496_0_39013305210829591">
-    <rdfs:label>Company</rdfs:label>
-    <rdfs:comment>Company Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="90325533_0_6668263142989366843">
-    <rdfs:label>Hospital</rdfs:label>
-    <rdfs:comment>Hospital Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="68779923_0_3859283110041832023">
-    <rdfs:label>Country</rdfs:label>
-    <rdfs:comment>Country Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="16949304_0_2573050770332101882">
-    <rdfs:label>Hospital</rdfs:label>
-    <rdfs:comment>Hospital Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="52299421_0_4473286348258170200">
-    <rdfs:label>Country</rdfs:label>
-    <rdfs:comment>Country Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="7929299_0_3253718003116029649">
-    <rdfs:label>Airport</rdfs:label>
-    <rdfs:comment>Airport Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="29414811_12_251152470253168163">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="54773498_0_4341462266113591159">
-    <rdfs:label>Building</rdfs:label>
-    <rdfs:comment>Building Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="32051842_5_1757891723986774036">
-    <rdfs:label>Museum</rdfs:label>
-    <rdfs:comment>Museum Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="24142265_0_4577466141408796359">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="39759273_0_1427898308030295194">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="8468806_0_4382447409703007384">
-    <rdfs:label>Lake</rdfs:label>
-    <rdfs:comment>Lake Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="24417511_0_3058323105166963431">
-    <rdfs:label>BaseballPlayer</rdfs:label>
-    <rdfs:comment>BaseballPlayer Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="58891288_0_1117541047012405958">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="97941125_0_8220652154649529701">
-    <rdfs:label>Currency</rdfs:label>
-    <rdfs:comment>Currency Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="1146722_1_7558140036342906956">
-    <rdfs:label>Mountain</rdfs:label>
-    <rdfs:comment>Mountain Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="21801207_0_8144839668470123042">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="84548468_0_5955155464119382182">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="69381058_0_984708047398578866">
-    <rdfs:label>Mountain</rdfs:label>
-    <rdfs:comment>Mountain Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="86747932_0_7532457067740920052">
-    <rdfs:label>Airline</rdfs:label>
-    <rdfs:comment>Airline Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="35188621_0_6058553107571275232">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="53583534_0_503521622577229691">
-    <rdfs:label>Building</rdfs:label>
-    <rdfs:comment>Building Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="47709681_0_4437772923903322343">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="14311244_0_7604843865524657408">
-    <rdfs:label>Mountain</rdfs:label>
-    <rdfs:comment>Mountain Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="77694908_0_6083291340991074532">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="22864497_0_8632623712684511496">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="88732174_0_7321365014357502211">
-    <rdfs:label>BaseballPlayer</rdfs:label>
-    <rdfs:comment>BaseballPlayer Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="45593932_0_6869375743660252130">
-    <rdfs:label>Scientist</rdfs:label>
-    <rdfs:comment>Scientist Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="71840765_0_6664391841933033844">
-    <rdfs:label>Lake</rdfs:label>
-    <rdfs:comment>Lake Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="19361188_0_1640726405141876003">
-    <rdfs:label>Mountain</rdfs:label>
-    <rdfs:comment>Mountain Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="9206866_1_8114610355671172497">
-    <rdfs:label>Country</rdfs:label>
-    <rdfs:comment>Country Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="49801939_0_6964113429298874283">
-    <rdfs:label>Mountain</rdfs:label>
-    <rdfs:comment>Mountain Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="21245481_0_8730460088443117515">
-    <rdfs:label>Lake</rdfs:label>
-    <rdfs:comment>Lake Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="49087820_0_461228320225084868">
-    <rdfs:label>Currency</rdfs:label>
-    <rdfs:comment>Currency Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="19654359_0_3020273135042459469">
-    <rdfs:label>Airport</rdfs:label>
-    <rdfs:comment>Airport Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="75367212_2_2745466355267233390">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="48944826_0_2321751364268052533">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="29414811_6_8221428333921653560">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="40844462_1_6230938203735169234">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="21362676_0_6854186738074119688">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="45533669_1_7463037039059239824">
-    <rdfs:label>RadioStation</rdfs:label>
-    <rdfs:comment>RadioStation Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="29414811_13_8724394428539174350">
-    <rdfs:label>VideoGame</rdfs:label>
-    <rdfs:comment>VideoGame Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="98312357_0_6395417306876145729">
-    <rdfs:label>Monarch</rdfs:label>
-    <rdfs:comment>Monarch Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="25404227_0_2240631045609013057">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="12183399_0_6725061928072492226">
-    <rdfs:label>Country</rdfs:label>
-    <rdfs:comment>Country Table</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="73988811_0_2775758476756716904">
-    <rdfs:label>Film</rdfs:label>
-    <rdfs:comment>Film Table</rdfs:comment>
-  </owl:Class>
 </rdf:RDF>
