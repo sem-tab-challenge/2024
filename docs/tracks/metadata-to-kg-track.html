@@ -11,7 +11,7 @@
 <body class="min-h-svh">
   <nav class="bg-grid bg-bottom z-20 sticky top-0 transition-all duration-300" id="nav-bar">
     <div class="container flex flex-wrap items-center justify-between py-1 relative">
-      <a href="./"
+      <a href="../"
         class="items-center space-x-3 rtl:space-x-reverse pointer-events-none opacity-1 transition-opacity duration-300"
         id="nav-brand">
         <span class="self-center text-2xl font-bold whitespace-nowrap bg-title animation-delay-200">SemTab 2024</span>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="./metadata-to-kg-track.html"
-                    class="block px-4 py-2 hover:bg-card-hover hover:text-foreground bg-primary text-primary-foreground">Only
+                    class="block px-4 py-2 hover:bg-card-hover hover:text-foreground bg-primary text-primary-foreground">
                     Metadata to KG
                   </a>
                 </li>
@@ -84,7 +84,7 @@
       <div
         class="lg:flex-grow md:w-3/4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center md:min-w-prose">
         <h1 class="sm:text-6xl text-3xl mb-4 font-bold bg-title animation-delay-700">
-          Only Metadata to KG Track</h1>
+          Table Metadata to KG Track</h1>
       </div>
     </div>
   </section>
@@ -107,10 +107,21 @@
 
     <section class="py-6 container">
       <h2 class="text-2xl font-bold animation-delay-1000 mb-3">Round 1</h2>
-      <p class="leading-relaxed text-base">Round 1 dataset will consist of a select set of web table metadata that need
-        to be mapped to DBpedia ontology. <b>This initial dataset will be posted on or before April 21st</b>.
+      <p class="leading-relaxed text-base">
+        <a href="https://github.com/sem-tab-challenge/2024/tree/main/data/metadata2kg/round1">Round 1 dataset</a>
+        consists of a select set of web table metadata
+        that need to be mapped to DBpedia ontology.
       </p>
-
+      <p>Check out the <a
+          href="https://github.com/sem-tab-challenge/2024/tree/main/data/metadata2kg/round1/README.md">README file</a>
+        for input/output format, sample
+        input/output, and an evaluation script. Note that the output of the mapping is a JSONL file with each line
+        containing a mapping of a column ID to an array of class IDs and scores, which will be sorted in descending
+        order by score for evaluation. Round 1 data has one mapping for each column, which is the most specific class
+        that the column maps to (e.g., if the column is about movie directors, the correct mapping should be
+        https://dbpedia.org/ontology/MovieDirector and not https://dbpedia.org/ontology/Person). In Round 2, each column
+        may map to more than one class, or no class at all. The provided evaluation script measures Hit@1 and Hit@5.
+        Other measures may be added for final evaluation and in Round 2.</p>
   </main>
 
   <main>
@@ -127,6 +138,77 @@
       <p class="leading-relaxed text-base">A link will be shared for submitting your mapping results for each round.
       </p>
   </main>
+
+
+  <!-- Co-Chairs -->
+  <section class="py-6 bg-grid bg-left-bottom container">
+    <h2 class="text-2xl font-bold bg-title animation-delay-75 mb-3">Track Organizers</h2>
+    <ul class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-2">
+
+      <li class="border rounded-md bg-card hover:bg-card-hover">
+        <a href="mailto:hassanzadeh@us.ibm.com" class="p-4 flex flex-col">
+          <strong>Oktie Hassanzadeh</strong>
+          <span class="text-slate-500">IBM Research</span>
+          <span class="text-sm flex items-center gap-1 mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-mail">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            hassanzadeh@us.ibm.com
+          </span>
+        </a>
+      </li>
+      <li class="border rounded-md bg-card hover:bg-card-hover">
+        <a href="mailto:elobo@umass.edu" class="p-4 flex flex-col">
+          <strong>Elita Lobo</strong>
+          <span class="text-slate-500">University of Massachusetts Amherst</span>
+          <span class="text-sm flex items-center gap-1 mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-mail">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            elobo@umass.edu
+          </span>
+        </a>
+      </li>
+      <li class="border rounded-md bg-card hover:bg-card-hover">
+        <a href="https://www.linkedin.com/in/nandanamihindu/" class="p-4 flex flex-col">
+          <strong>Nandana Mihindukulasooriya</strong>
+          <span class="text-slate-500">IBM Research</span>
+          <span class="text-sm flex items-center gap-1 mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-mail">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            nandana at ibm.com
+          </span>
+        </a>
+      </li>
+      <li class="border rounded-md bg-card hover:bg-card-hover">
+        <a href="https://nhanph.github.io/" class="p-4 flex flex-col">
+          <strong>Nhan H. Pham</strong>
+          <span class="text-slate-500">IBM Research</span>
+          <span class="text-sm flex items-center gap-1 mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-mail">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            https://nhanph.github.io/
+          </span>
+        </a>
+      </li>
+    </ul>
+    </p>
+  </section>
+
 
   <aside id="date-card-container"
     class="sticky bottom-0 sm:bottom-6 w-full sm:left-auto sm:right-6 sm:max-w-fit sm:ml-auto p-4 md:p-8 rounded-t-lg sm:rounded-lg bg-card border shadow-lg text-sm md:text-base transition-spacing duration-300">
