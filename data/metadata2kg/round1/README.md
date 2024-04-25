@@ -2,7 +2,7 @@
 
 ## Round 1
 
-In this round, a JSONL file is provided with each line representing a column in a table, along with table name, column name, and other columns in the same table. The goal is to map each such column to one DBpedia ontology class. We have also provided the metadata in the form of an OWL ontology, to facilitate the mapping using ontology matching tools.
+In this round, a JSONL file is provided with each line representing a column in a table, along with table name, column name, and other columns in the same table. The goal is to map each such column to one DBpedia ontology property. We have also provided the metadata in the form of an OWL ontology, to facilitate the mapping using ontology matching tools.
 
 Sample data:
 - [Sample Metadata File in JSONL](r1_sample_metadata.jsonl)
@@ -18,7 +18,7 @@ Test data (what we expect you to map to the glossary):
 Glossary:
 - [Glossary in JSONL](r1_glossary.jsonl)
 - [Glossary in OWL](r1_glossary.owl)
-- You can also use the full DBpedia OWL ontology that can be found [here](https://github.com/dbpedia/dbpedia/tree/master/ontology).
+  - Note that this is a representation of all the DBpedia properties as classes with one label and one description only. You can also use the full DBpedia OWL ontology that can be found [here](https://github.com/dbpedia/dbpedia/tree/master/ontology) but you need to ensure that you only map to properties.
 
 Evaluation script:
 - To try the evaluation script over the provided sample input/output, go to the data folder and run:
