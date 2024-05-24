@@ -1,6 +1,6 @@
 # Metadata to KG Track Round 2 Datasets
 
-In this round, a JSONL file is provided with each line representing a column in a table, along with table name, column name, and other columns in the same table. The goal is to map each such column to one "business glossary" item. We have also provided the metadata as well as the glossary in the form of an OWL ontology, to facilitate the mapping using ontology matching tools.
+In this round, a JSONL file is provided with each line representing a column in a table, along with table name, column name, and other columns in the same table. The goal is to map each such column to one "glossary" item. We have also provided the metadata as well as the glossary in the form of an OWL ontology, to facilitate the mapping using ontology matching tools.
 
 Sample data:
 - [Sample Metadata File in JSONL](r2_sample_metadata.jsonl)
