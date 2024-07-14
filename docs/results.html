@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SemTab 2024</title>
+  <link href="./css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <nav class="bg-grid bg-bottom z-20 sticky top-0 transition-all duration-300" id="nav-bar">
+    <div class="container flex flex-wrap items-center justify-between py-1 relative">
+      <a href="./"
+        class="items-center space-x-3 rtl:space-x-reverse pointer-events-none opacity-0 transition-opacity duration-300"
+        id="nav-brand">
+        <span class="self-center text-2xl font-bold whitespace-nowrap bg-title animation-delay-200">SemTab 2024</span>
+      </a>
+
+      <button data-collapse-toggle="navbar-default" type="button" id="navbar-toggle"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
+
+      <div class="grid grid-rows-0fr transition-grid-template-rows w-full md:block md:ml-auto md:w-auto p-4 md:p-0"
+        id="navbar-content">
+        <ul
+          class="overflow-hidden font-semibold flex flex-col md:p-0 md:py-3 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:-mr-3">
+          <li>
+            <a href="./" class="block py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="block py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
+              aria-current="page">About</a>
+          </li>
+          <li>
+            <a href="#badge" class="block py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
+              aria-current="page">Artifacts Badge</a>
+          </li>
+          <li>
+            <a href="#paper" class="block py-1.5 px-3 rounded-lg hover:bg-primary hover:text-primary-foreground"
+              aria-current="page">Paper Guidelines</a>
+          </li>
+          <li>
+            <label for="dropdown-toggle"
+              class="py-1.5 px-3 text-foreground rounded-lg hover:bg-primary hover:text-primary-foreground flex items-center cursor-pointer has-[:checked]:bg-primary has-[:checked]:text-primary-foreground">
+              Tracks
+              <input type="checkbox" class="hidden peer" id="dropdown-toggle" name="dropdown-toggle" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chevron-up h-6 w-6 peer-checked:rotate-0 rotate-180 transition-transform duration-300">
+                <path d="m18 15-6-6-6 6" />
+              </svg>
+            </label>
+
+            <!-- Dropdown menu -->
+            <div id="dropdown-content"
+              class="z-10 absolute hidden top-16 right-0 bg-card divide-y divide-slate-200 rounded-lg shadow w-44">
+              <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButton">
+                <li>
+                  <a href="./tracks/accuracy-track.html" class="block px-4 py-2 hover:bg-card-hover">Accuracy</a>
+                </li>
+                <li>
+                  <a href="./tracks/sti-vs-llm-track.html" class="block px-4 py-2 hover:bg-card-hover">STI vs LLMs</a>
+                </li>
+                <li>
+                  <a href="./tracks/metadata-to-kg-track.html" class="block px-4 py-2 hover:bg-card-hover">Metadata to
+                    KG
+                  </a>
+                </li>
+                <li>
+                  <a href="./tracks/is-gold-track.html" class="block px-4 py-2 hover:bg-card-hover">IsGold?</a>
+                </li>
+                <li>
+                  <a href="./tracks/datasets-track.html" class="block px-4 py-2 hover:bg-card-hover">Datasets</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+    <!-- Results -->
+    <section class="py-6 container">
+      <h2 id="about" class="text-2xl font-bold bg-title animation-delay-1000 scroll-m-20 mb-3">SemTab 2024 Interim
+        Results</h2>
+      <p>The following are the results of <b>ongoing evaluation of current submissions</b>. Submissions are still open,
+        and the
+        results on this page will be updated frequently. Please contact the track chairs if you have a submission with
+        no results reported on this page.
+      </p>
+
+      <!-- Accuracy -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1">
+          <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+          <h3 class="text-xl font-bold">Accuracy Track</h3>
+        </div>
+        <a href="./tracks/accuracy-track.html" class="inline-flex items-center gap-1 text-primary">
+          <span>Track page</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-move-right">
+            <path d="M18 8L22 12L18 16" />
+            <path d="M2 12H22" />
+          </svg>
+        </a>
+      </div>
+      <p>
+      <div class="lg:max-w-1/3 w-1/2 relative isolate">
+        <a href="./results/accuracy-track-interim-results.png"><img alt="Accuracu Track Interim Results"
+            src="./results/accuracy-track-interim-results.png"></a>
+      </div>
+      </p>
+
+      <!-- STI vs LLMs-->
+      <div class="flex items-center justify-between mt-7">
+        <div class="flex items-center gap-1">
+          <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+          <h3 class="text-xl font-bold">STI vs LLMs Track</h3>
+        </div>
+        <a href="./tracks/sti-vs-llm-track.html" class="inline-flex items-center gap-1 text-primary">
+          <span>Track page</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-move-right">
+            <path d="M18 8L22 12L18 16" />
+            <path d="M2 12H22" />
+          </svg>
+        </a>
+      </div>
+      <p>
+      <div class="lg:max-w-1/3 md:w-1/4 w-1/2 relative isolate">
+        <a href="./results/coming-soon.png"><img alt="Accuracu Track Interim Results"
+            src="./results/coming-soon.png"></a>
+      </div>
+      </p>
+
+      <!-- Metadata to KG Track -->
+      <div class="flex items-center justify-between mt-7">
+        <div class="flex items-center gap-1">
+          <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+          <h3 class="text-xl font-bold">Metadata to KG Track</h3>
+        </div>
+        <a href="./tracks/metadata-to-kg-track.html" class="inline-flex items-center gap-1 text-primary">
+          <span>Track page</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-move-right">
+            <path d="M18 8L22 12L18 16" />
+            <path d="M2 12H22" />
+          </svg>
+        </a>
+      </div>
+      <p>
+      <div class="lg:max-w-1/3 w-1/2 relative isolate">
+        <a href="./results/metadata2kg-interim-results.png"><img alt="Accuracu Track Interim Results"
+            src="./results/metadata2kg-interim-results.png"></a>
+      </div>
+      </p>
+
+      <!-- IsGold? Track [TBU] -- >
+      <div class="flex items-center justify-between mt-5">
+        <div class="flex items-center gap-1">
+          <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+          <h3 class="text-xl font-bold">IsGold? Track</h3>
+        </div>
+        <a href="./tracks/is-gold-track.html" class="inline-flex items-center gap-1 text-primary">
+          <span>Track page</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-move-right">
+            <path d="M18 8L22 12L18 16" />
+            <path d="M2 12H22" />
+          </svg>
+        </a>
+      </div>
+      <p class="leading-relaxed text-base">
+        No submissions yet. Stay tuned.
+      </p>
+
+      <!-- Datasets Track -- >
+      <div class="flex items-center justify-between mt-5">
+        <div class="flex items-center gap-1">
+          <div class="flex-shrink-0 h-4 w-2 bg-move rounded-sm"></div>
+          <h3 class="text-xl font-bold">Datasets Track</h3>
+        </div>
+        <a href="./tracks/datasets-track.html" class="inline-flex items-center gap-1 text-primary">
+          <span>Track page</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-move-right">
+            <path d="M18 8L22 12L18 16" />
+            <path d="M2 12H22" />
+          </svg>
+        </a>
+      </div>
+      <p class="leading-relaxed text-base">
+        No submissions yet. Stay tuned.
+      </p>
+    -->
+    </section>
+
+  </main>
+
+  <label for="checkbox-date-card" class="cursor-pointer flex items-center justify-between">
+    <input checked="false" data-collapse-toggle="false" type="checkbox" id="checkbox-date-card"
+      name="checkbox-date-card" class="hidden peer" />
+  </label>
+  </div>
+
+  <script src="./js/main.min.js" defer></script>
+</body>
+
+</html>
