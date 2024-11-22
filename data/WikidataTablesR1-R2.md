@@ -1,0 +1,1 @@
+Get WikidataTables2024R1.tar.gz and WikidataTables2024R2.tar.gz from: [https://zenodo.org/records/14207232](https://zenodo.org/records/14207232).
